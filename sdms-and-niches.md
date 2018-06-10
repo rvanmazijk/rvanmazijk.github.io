@@ -28,7 +28,7 @@ Perhaps my suggestions are naïve, but my judgement at the moment is that there 
 
 ---
 
-References
+## References
 
 Bocsi, T., Allen, J.M., Bellemare, J., Kartesz, J., Nishino, M. and Bradley, B.A., 2016. Plants' native distributions do not reflect climatic tolerance. Diversity and Distributions.
 
