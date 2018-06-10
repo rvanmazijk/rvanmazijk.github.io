@@ -1,2 +1,4 @@
 title: Insert botanical title
 markdown: kramdown
+
+theme: jekyll-theme-minimal
