@@ -14,7 +14,7 @@ mainfont: "Helvetica"
 - Personal email: <ruanvmazijk@gmail.com>
 - Work email: <VMZRUA001@myuct.ac.za>
 - ![](logos/ORCID.png){ height=10 } <https://orcid.org/0000-0003-2659-6909>
-- Find me as \@rvanmazijk on ![](logos/Twitter.png){ width=10 } [Twitter](https://twitter.com/rvanmazijk) and ![](logos/Github.png){ width=10 } [Github](https://github.com/rvanmazijk)
+- Find me as \@rvanmazijk on ![](logos/Twitter.png){ width=10 } [Twitter](https://twitter.com/rvanmazijk) and ![](logos/GitHub.png){ width=10 } [GitHub](https://github.com/rvanmazijk)
 - Also find me on ![](logos/LinkedIn.png){ width=10 } [LinkedIn](https://www.linkedin.com/in/ruan-van-mazijk-4a04b0127), ![](logos/ResearchGate-green.jpg){ width=10 } [ResearchGate](https://www.researchgate.net/profile/Ruan_Van_Mazijk) and ![](logos/Mendeley-red.png){ width=10 } [Mendeley](https://www.mendeley.com/profiles/ruan-van-mazijk)
 
 ***
