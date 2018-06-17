@@ -1,6 +1,8 @@
 # About the scientist: *Ruan van Mazijk*
 
-![](cv/face2.jpg) ![](logos/UCT.png) ![](logos/BIO.png)
+<img src="cv/face2.jpg" width="200" height="200"> 
+<img src="logos/UCT.png" width="50" height="50"> 
+<img src="logos/BIO.png" width="50" height="50">
 
 Hi! I'm Ruan, a South African ecology and evolutionary biology Masters student at the Dept. of Biological Sciences, University of Cape Town.
 
