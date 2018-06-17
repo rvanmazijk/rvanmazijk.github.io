@@ -1,8 +1,6 @@
-# A botanist's blog
+# About the scientist: *Ruan van Mazijk*
 
-*Ruan van Mazijk*
-
-## About the scientist
+![](cv/face2.jpg) ![](logos/UCT.png) ![](logos/BIO.png)
 
 Hi! I'm Ruan, a South African ecology and evolutionary biology Masters student at the Dept. of Biological Sciences, University of Cape Town.
 
@@ -10,7 +8,7 @@ I am most fascinated by phylogenetic systematics, plant ecophysiology, phylogene
 
 [My MSc](https://rvanmazijk.github.io/MSc-genome-ecophys/) has me investigating the links between genome size and ecophysiological limitations, such as water-use efficiency, in the Cape Schoenoid sedge genera *Schoenus* and *Tetraria*. I'm using morphological, physiological and phenological data to ascertain how (or if) rampant polyploidisation events in the *Schoenus* lineage affect those species ecology.
 
-## Migrated posts from Blogspot:
+# Migrated posts from Blogspot:
 
 - [What determines a species range? Thoughts about SDMs and niches](posts/sdms-and-niches.md)
 - [Identifying and thinking about a weed](posts/weed-id.md)
