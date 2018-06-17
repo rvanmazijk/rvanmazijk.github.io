@@ -14,9 +14,9 @@ mainfont: "Helvetica"
 - Office: +27 21 650 3684
 - Personal email: <ruanvmazijk@gmail.com>
 - Work email: <VMZRUA001@myuct.ac.za>
-- ![](logos/ORCID.png){ height=10 } <https://orcid.org/0000-0003-2659-6909>
-- Find me as @rvanmazijk on ![](logos/Twitter.png){ width=10 } [Twitter](https://twitter.com/rvanmazijk) and ![](logos/GitHub.png){ width=10 } [GitHub](https://github.com/rvanmazijk)
-- Also find me on ![](logos/LinkedIn.png){ width=10 } [LinkedIn](https://www.linkedin.com/in/ruan-van-mazijk-4a04b0127), ![](logos/ResearchGate-green.jpg){ width=10 } [ResearchGate](https://www.researchgate.net/profile/Ruan_Van_Mazijk) and ![](logos/Mendeley-red.png){ width=10 } [Mendeley](https://www.mendeley.com/profiles/ruan-van-mazijk)
+- ![](logos/ORCID.png){ width=16 } <https://orcid.org/0000-0003-2659-6909>
+- Find me as @rvanmazijk on ![](logos/Twitter.png){ width=16 } [Twitter](https://twitter.com/rvanmazijk) and ![](logos/GitHub.png){ width=16 } [GitHub](https://github.com/rvanmazijk)
+- Also find me on ![](logos/LinkedIn.png){ width=16 } [LinkedIn](https://www.linkedin.com/in/ruan-van-mazijk-4a04b0127), ![](logos/ResearchGate-green.jpg){ width=16 } [ResearchGate](https://www.researchgate.net/profile/Ruan_Van_Mazijk) and ![](logos/Mendeley-red.png){ width=16 } [Mendeley](https://www.mendeley.com/profiles/ruan-van-mazijk)
 
 ***
 
@@ -26,7 +26,7 @@ I am a fundamentally curiosity driven individual. My interests include plant and
 
 # Current positions
 
-![](logos/UCT.png){ height=30 } ![](logos/BIO.png){ height=30 }
+![](logos/UCT.png){ width=100 } ![](logos/BIO.png){ width=100 }
 
 **MSc candidate** (Dept. of Biological Sciences, University of Cape Town) (2018---present). Dissertation title: The effects of genome size on plant hydraulic ecophysiology, habitat, and phenology in Cape Schoenoid sedges (Cyperaceae: Schoeneae). Principle supervisor: Associate Prof A.M. Muasya. Co-supervisors: Associate Prof G.A. Verboom and Associate Prof A.G. West.
 
