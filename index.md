@@ -12,7 +12,7 @@ I am most fascinated by phylogenetic systematics, plant ecophysiology, phylogene
 
 # R tutorials
 
-I wrote one for my colleagues at the Dept. of Biological Sciences, UCT, [here](R-tut-for-Muasya-lab/R-tut-for-Muasya-lab.html).
+I wrote one for my colleagues at the Dept. of Biological Sciences, UCT, [here](R-tut-for-Muasya-lab/).
 
 # Migrated posts from Blogspot:
 
