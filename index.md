@@ -29,3 +29,5 @@ I wrote one for my colleagues at the Dept. of Biological Sciences, UCT, [here](R
 - [What determines a species range? Thoughts about SDMs and niches](posts/sdms-and-niches.md)
 - [Identifying and thinking about a weed](posts/weed-id.md)
 - [The clovers (Fabaceae: *Trifolium* spp.)](posts/clovers.md)
+
+<iframe src=https://www.researchgate.net/plugins/department?stats=true&faces=true&publications=true&height=600&width=300&theme=light&type=department&installationId=5b47782e3cdd325b301e74f9 />
