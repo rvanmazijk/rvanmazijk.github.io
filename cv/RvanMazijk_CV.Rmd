@@ -1,10 +1,9 @@
 ---
 title: "Ruan van Mazijk, *Curriculum vitae*"
-date: 2018
+date: "`r format(Sys.time(), '%F')`"
 output:
-    html_document: default
-    pdf_document:
-        latex_engine: xelatex
+  pdf_document:
+    latex_engine: xelatex
 mainfont: "Helvetica"
 ---
 
@@ -12,8 +11,7 @@ mainfont: "Helvetica"
 
 - Cell: +27 72 516 7570
 - Office: +27 21 650 3684
-- Personal email: <ruanvmazijk@gmail.com>
-- Work email: <VMZRUA001@myuct.ac.za>
+- Email: <ruanvmazijk@gmail.com>
 - ![](logos/ORCID.png){ width=16 } <https://orcid.org/0000-0003-2659-6909>
 - Find me as @rvanmazijk on ![](logos/Twitter.png){ width=16 } [Twitter](https://twitter.com/rvanmazijk) and ![](logos/GitHub.png){ width=16 } [GitHub](https://github.com/rvanmazijk)
 - Also find me on ![](logos/LinkedIn.png){ width=16 } [LinkedIn](https://www.linkedin.com/in/ruan-van-mazijk-4a04b0127), ![](logos/ResearchGate-green.jpg){ width=16 } [ResearchGate](https://www.researchgate.net/profile/Ruan_Van_Mazijk) and ![](logos/Mendeley-red.png){ width=16 } [Mendeley](https://www.mendeley.com/profiles/ruan-van-mazijk)
@@ -72,7 +70,7 @@ South African Association of Botanists (**SAAB**) **Honours Scholarship** (R10,0
 
 **Class Medals** (top of the class) for five Biological Sciences undergraduate courses at UCT (2014---2016). Namely:
 
-- Evolutionary Biology (BIO3016S (2016)
+- Evolutionary Biology (BIO3016S) (2016)
 - Life on Land: Plants (BIO2012S) (2015)
 - Life on Land: Animals (BIO2011S) (2015)
 - Life in the Sea (BIO2013F) (2015)
@@ -134,10 +132,10 @@ Attendee at workshop **Spatial Point Process Modelling for Ecological Survey Dat
 
 **Extended experience** with:
 
-- Apple OS-X & macOS
+- Apple macOS
 - MS Windows, MS Office
-- `R`, RStudio, `tidyverse` packages, RMarkdown & RNotebooks
-- GitHub
+- R, RStudio, RMarkdown, "tidyverse" packages
+- Git, GitHub
 
 **Fluent** in both English and Afrikaans.
 
