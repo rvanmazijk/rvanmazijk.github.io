@@ -8,27 +8,7 @@ Hi! I'm Ruan, a South African ecology and evolutionary biology Masters student a
 
 I am most fascinated by phylogenetic systematics, plant ecophysiology, phylogenetic ecology and evolutionary biology in general. Find me as @rvanmazijk on <img src="logos/Twitter.png" width="16" height="16"> [Twitter](https://twitter.com/rvanmazijk) and <img src="logos/GitHub.png" width="16" height="16"> [Github](https://github.com/rvanmazijk). My CV is [here](cv/RvanMazijk_CV.pdf).
 
-[My MSc](MSc-genome-ecophys/) has me investigating the links between genome size and ecophysiological limitations, such as water-use efficiency, in the Cape Schoenoid sedge genera *Schoenus* and *Tetraria*. I'm using morphological, physiological and phenological data to ascertain how (or if) rampant polyploidisation events in the *Schoenus* lineage affect those species ecology.
-
-[My largest side-project](Cape-vs-SWA/), carrying on from my BSc Hons work, ...
-
-Some other things from my Honours year:
-
-- An essay on [Gloger's ecogeographic rule](Glogers-rule-essay/essay.pdf))
-- ...
-<!-- 
--A publication in review, on isotopic tracing of storm water in an urban South African river
--->
-
-# R tutorials
-
-I wrote one for my colleagues at the Dept. of Biological Sciences, UCT, [here](R-tut-for-Muasya-lab/).
-
-# Migrated posts from Blogspot:
-
-- [What determines a species range? Thoughts about SDMs and niches](posts/sdms-and-niches.md)
-- [Identifying and thinking about a weed](posts/weed-id.md)
-- [The clovers (Fabaceae: *Trifolium* spp.)](posts/clovers.md)
+I am also on [ResearchGate](https://www.researchgate.net/profile/Ruan_Van_Mazijk).
 
 <!--ResearchGate widget-->
 <script>
@@ -51,3 +31,25 @@ I wrote one for my colleagues at the Dept. of Biological Sciences, UCT, [here](R
   data-type="department" 
   data-installationId="5b47782e3cdd325b301e74f9"
 />
+
+[My MSc](MSc-genome-ecophys/) has me investigating the links between genome size and ecophysiological limitations, such as water-use efficiency, in the Cape Schoenoid sedge genera *Schoenus* and *Tetraria*. I'm using morphological, physiological and phenological data to ascertain how (or if) rampant polyploidisation events in the *Schoenus* lineage affect those species ecology.
+
+[My largest side-project](Cape-vs-SWA/), carrying on from my BSc Hons work, ...
+
+Some other things from my Honours year:
+
+- An essay on [Gloger's ecogeographic rule](Glogers-rule-essay/essay.pdf))
+- ...
+<!-- 
+-A publication in review, on isotopic tracing of storm water in an urban South African river
+-->
+
+# R tutorials
+
+I wrote one for my colleagues at the Dept. of Biological Sciences, UCT, [here](R-tut-for-Muasya-lab/).
+
+# Migrated posts from Blogspot:
+
+- [What determines a species range? Thoughts about SDMs and niches](posts/sdms-and-niches.md)
+- [Identifying and thinking about a weed](posts/weed-id.md)
+- [The clovers (Fabaceae: *Trifolium* spp.)](posts/clovers.md)
