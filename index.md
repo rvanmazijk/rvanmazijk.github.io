@@ -8,29 +8,7 @@ Hi! I'm Ruan, a South African ecology and evolutionary biology Masters student a
 
 I am most fascinated by phylogenetic systematics, plant ecophysiology, phylogenetic ecology and evolutionary biology in general. Find me as @rvanmazijk on <img src="logos/Twitter.png" width="16" height="16"> [Twitter](https://twitter.com/rvanmazijk) and <img src="logos/GitHub.png" width="16" height="16"> [Github](https://github.com/rvanmazijk). My CV is [here](cv/RvanMazijk_CV.pdf).
 
-I am also on [ResearchGate](https://www.researchgate.net/profile/Ruan_Van_Mazijk).
-
-<!--ResearchGate widget-->
-<script>
-  (function() { 
-    var st = document.createElement('script');
-    st.type = 'text/javascript'; 
-    st.async = true; 
-    st.src = 'https://www.researchgate.net/javascript/plugin/plugin-api-min.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(st, s);
-  })(); 
-</script>
-<div
-  class="rg-plugin"
-  data-stats="true" 
-  data-faces="true" 
-  data-publications="true" 
-  data-width="300" data-height="600" 
-  data-theme="light" 
-  data-type="department" 
-  data-installationId="5b47782e3cdd325b301e74f9"
-/>
+I am also on [ResearchGate](https://www.researchgate.net/profile/Ruan_Van_Mazijk) (see below).
 
 [My MSc](MSc-genome-ecophys/) has me investigating the links between genome size and ecophysiological limitations, such as water-use efficiency, in the Cape Schoenoid sedge genera *Schoenus* and *Tetraria*. I'm using morphological, physiological and phenological data to ascertain how (or if) rampant polyploidisation events in the *Schoenus* lineage affect those species ecology.
 
@@ -53,3 +31,25 @@ I wrote one for my colleagues at the Dept. of Biological Sciences, UCT, [here](R
 - [What determines a species range? Thoughts about SDMs and niches](posts/sdms-and-niches.md)
 - [Identifying and thinking about a weed](posts/weed-id.md)
 - [The clovers (Fabaceae: *Trifolium* spp.)](posts/clovers.md)
+
+<!--ResearchGate widget-->
+<script>
+  (function() { 
+    var st = document.createElement('script');
+    st.type = 'text/javascript'; 
+    st.async = true; 
+    st.src = 'https://www.researchgate.net/javascript/plugin/plugin-api-min.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(st, s);
+  })(); 
+</script>
+<div
+  class="rg-plugin"
+  data-stats="true" 
+  data-faces="true" 
+  data-publications="true" 
+  data-width="300" data-height="600" 
+  data-theme="light" 
+  data-type="department" 
+  data-installationId="5b47782e3cdd325b301e74f9"
+/>
