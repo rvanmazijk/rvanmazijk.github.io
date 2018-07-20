@@ -1,6 +1,6 @@
 # About the scientist: *Ruan van Mazijk*
 
-<img src="face2.jpg" width="200" height="200"> 
+<img src="face2.jpg" width="100" height="100"> 
 <img src="logos/UCT.png" width="100" height="100"> 
 <img src="logos/BIO.png" width="100" height="100">
 
@@ -16,8 +16,7 @@ I am also on [ResearchGate](https://www.researchgate.net/profile/Ruan_Van_Mazijk
 
 Some other things from my Honours year:
 
-- An essay on [Gloger's ecogeographic rule](Glogers-rule-essay/essay.pdf))
-- ...
+- An essay on [Gloger's ecogeographic rule](Glogers-rule-essay/essay.pdf)
 <!-- 
 -A publication in review, on isotopic tracing of storm water in an urban South African river
 -->
