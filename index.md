@@ -4,6 +4,8 @@
 <img src="logos/UCT.png" width="100" height="100"> 
 <img src="logos/BIO.png" width="100" height="100">
 
+**Please note, this website is still a work-in-progress**
+
 Hi! I'm Ruan, a South African ecology and evolutionary biology Masters student at the Dept. of Biological Sciences, University of Cape Town.
 
 I am most fascinated by phylogenetic systematics, plant ecophysiology, phylogenetic ecology and evolutionary biology in general. Find me as @rvanmazijk on <img src="logos/Twitter.png" width="16" height="16"> [Twitter](https://twitter.com/rvanmazijk) and <img src="logos/GitHub.png" width="16" height="16"> [Github](https://github.com/rvanmazijk). A short version of my CV is [here](cv/RvanMazijk_CV_short.pdf).
