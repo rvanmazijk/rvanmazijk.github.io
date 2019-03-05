@@ -61,5 +61,4 @@ I have written a few tutorials about R and related tools for my colleagues at th
 />
 
 <!-- Twitter feed widget -->
-<a class="twitter-timeline" href="https://twitter.com/rvanmazijk?ref_src=twsrc%5Etfw">Tweets by rvanmazijk</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" href="https://twitter.com/rvanmazijk?ref_src=twsrc%5Etfw">Tweets by rvanmazijk</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
