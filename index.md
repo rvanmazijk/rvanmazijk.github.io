@@ -1,11 +1,8 @@
----
-title: "About the scientist: _Ruan van Mazijk_"
-output: html_document
----
+# About the scientist: _Ruan van Mazijk_
 
-<img src="face2.jpg" width="100" height="100"> 
-<img src="logos/UCT.png" width="100" height="100"> 
-<img src="logos/BIO.png" width="100" height="100">
+<img src="face2.jpg"     width="100" height="100" /> 
+<img src="logos/UCT.png" width="100" height="100" /> 
+<img src="logos/BIO.png" width="100" height="100" />
 
 **Please note, this website is still a work-in-progress**
 
@@ -17,7 +14,7 @@ A short version of my CV is [here](cv/RvanMazijk_CV_1page.pdf), and a more compr
 
 I am also on [ResearchGate](https://www.researchgate.net/profile/Ruan_Van_Mazijk) (see below).
 
-# Projects
+## Projects
 
 My MSc has me investigating the links between genome size and ecophysiological limitations, such as water-use efficiency, in the Cape Schoenoid sedge genera *Schoenus* and *Tetraria*. I'm using morphological, physiological and phenological data to ascertain how (or if) rampant polyploidisation events in the *Schoenus* lineage affect those species' ecologies.
 
@@ -28,14 +25,14 @@ Some other things from my Honours year:
 - An essay on [Gloger's ecogeographic rule](Glogers-rule-essay/essay.pdf) that I'm fairly proud of.
 - <!--A publication in review, on isotopic tracing of storm water in an urban South African river-->
 
-# Tutorials
+## Tutorials
 
 I have written a few tutorials about R and related tools for my colleagues at the Dept. of Biological Sciences, UCT.
 
 - [R tutorial](R-tut-for-Muasya-lab/), for the Muasya Lab
 - [An introduction to R Markdown](Rmd-tut-for-West-lab), for the West Lab
 
-# Migrated posts from Blogspot:
+## Migrated posts from Blogspot:
 
 - [What determines a species range? Thoughts about SDMs and niches](posts/sdms-and-niches.md)
 - [Identifying and thinking about a weed](posts/weed-id.md)
