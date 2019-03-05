@@ -38,7 +38,7 @@ I have written a few tutorials about R and related tools for my colleagues at th
 - [Identifying and thinking about a weed](posts/weed-id.md)
 - [The clovers (Fabaceae: *Trifolium* spp.)](posts/clovers.md)
 
-<!--ResearchGate widget-->
+<!-- ResearchGate widget -->
 <script>
   (function() { 
     var st = document.createElement('script');
@@ -59,3 +59,7 @@ I have written a few tutorials about R and related tools for my colleagues at th
   data-type="department" 
   data-installationId="5b47782e3cdd325b301e74f9"
 />
+
+<!-- Twitter feed widget -->
+<a class="twitter-timeline" href="https://twitter.com/rvanmazijk?ref_src=twsrc%5Etfw">Tweets by rvanmazijk</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
