@@ -4,9 +4,7 @@
 <img src="logos/UCT.png" width="100" height="100" />
 <img src="logos/BIO.png" width="100" height="100" />
 
-**Please note, this website is still a work-in-progress**
-
-Hi! I'm Ruan, a South African ecology and evolutionary biology Masters student at the Dept. of Biological Sciences, University of Cape Town.
+Hi! I'm Ruan, a South African ecology and evolutionary biology Masters student at the Dept. of Biological Sciences, University of Cape Town (UCT).
 
 I am most fascinated by phylogenetic systematics, plant ecophysiology, phylogenetic ecology and evolutionary biology in general. Find me as @rvanmazijk on <img src="logos/Twitter.png" width="16" height="16"> [Twitter](https://twitter.com/rvanmazijk) and <img src="logos/GitHub.png" width="16" height="16"> [Github](https://github.com/rvanmazijk).
 
@@ -16,9 +14,9 @@ I am also on [ResearchGate](https://www.researchgate.net/profile/Ruan_Van_Mazijk
 
 ## Projects & publications
 
-My MSc <!-- TODO: make mini-MSC-repo and link here --> has me investigating the links between genome size and ecophysiological limitations, such as water-use efficiency, in the Cape Schoenoid sedge genera _Schoenus_ L. and _Tetraria_ Beauv (Cyperaceae, Tribe Schoeneae). I'm using morphological, physiological and phenological data to ascertain how (or if) rampant polyploidisation events in the _Schoenus_ lineage affect those species' ecologies.
+My MSc <!-- TODO: make mini-MSC-repo and link here --> in the Dept. of Biological Sciences, UCT, has me investigating the links between genome size and ecophysiological limitations, such as water-use efficiency, in the sedge genera _Schoenus_ L. and _Tetraria_ Beauv (Cyperaceae, Tribe Schoeneae), all fynbos species in the Cape Floristic Region. I'm using morphological, physiological and phenological data to ascertain how (or if) rampant polyploidisation events in the _Schoenus_ lineage affect those species' ecologies. My supervisors are Associate Profs [Muthama Muasya](https://www.researchgate.net/profile/A_Muasya), [Tony Verboom](https://www.researchgate.net/profile/George_Verboom) and [Adam West](https://www.researchgate.net/profile/Adam_West3).
 
-[My largest side-project](Cape-vs-SWA/) carries on from my BSc Hons work with Associate Prof Tony Verboom and Prof Mike Cramer. It's a macro-ecology project, where we aim to quantify how environmental heterogeneity relates to patterns of plant species richness and turnover in the Greater Cape Floristic Region and in the Southwest Australia Floristic Region. We compare the environmental heterogeneity in each region, how species richness and turnover interact in each region to produce the observed patterns of richness, and what different forms of environmental heterogeneity better predict richness in each region. This is currently a publication in prep. for submission to the Journal of Biogeography.
+[My largest side-project](Cape-vs-SWA/) carries on from my BSc Hons work with [Associate Prof Tony Verboom](https://www.researchgate.net/profile/George_Verboom) and [Prof Mike Cramer](https://www.researchgate.net/profile/Michael_Cramer2) in the Dept. of Biological Sciences, UCT. It's a macro-ecology project, where we aim to quantify how environmental heterogeneity relates to patterns of plant species richness and turnover in the Greater Cape Floristic Region and in the Southwest Australia Floristic Region. We compare the environmental heterogeneity in each region, how species richness and turnover interact in each region to produce the observed patterns of richness, and what different forms of environmental heterogeneity better predict richness in each region. This is currently a publication in prep. for submission to the Journal of Biogeography.
 
 Some other things from my Honours year include:
 
