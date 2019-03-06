@@ -1,10 +1,16 @@
-# Identifying and thinking about a weed
+---
+title: "Identifying and thinking about a weed"
+author: "Ruan van Mazijk"
+layout: post
+---
 
 Living in the same city your whole life means you develop a sense of familiarity with the weeds in gardens and along roads and in fields. I suppose that is arguably conditional on your being ecologically inclined, however.
 
 Either way, in the past three months (spring in this part of the world) I have been particularly aware of these:
 
-![The weed in question, from a green space in my neighbourhood, Cape Town, South Africa.](weed-id/Durbanville-weed.jpg)
+![](weed-id/Durbanville-weed.jpg)
+
+_The weed in question, from a green space in my neighbourhood, Cape Town, South Africa._
 
 These plants grow *en masse* here in the Western Cape, South Africa, as invasive weeds: basically everywhere there's space or disturbance, in usually large sprawling patches. My confusion about the identity of this weed follows.
 
@@ -12,9 +18,13 @@ Stumbling upon this species' identity in an illustrated book of British flora (I
 
 However, upon closer inspection, I may have misidentified it:
 
-![[This](https://en.wikipedia.org/wiki/Echium_vulgare#/media/File:Echium_vulgare_L.jpg) is *E. vulgare*... (photo credit in link)](weed-id/Echium-vulgare.jpg)
+![](weed-id/Echium-vulgare.jpg)
 
-![... and [this](http://www.esc.nsw.gov.au/living-in/about/our-natural-environment/introduced-plants-and-animals/weeds/weed-profiles/patersons-curse-or-salvation-jane-echium-plantagineum/Echium-plantagineum-plant.jpg) is [*E. plantagineum*](http://www.invasives.org.za/legislation/item/243-patterson-s-curse-echium-plantagineum), a.k.a. Paterson's curse (photo credit in link).](weed-id/Echium-plantagineum.jpg)
+_[This](https://en.wikipedia.org/wiki/Echium_vulgare#/media/File:Echium_vulgare_L.jpg) is *E. vulgare*... (photo credit in link)_
+
+![](weed-id/Echium-plantagineum.jpg)
+
+_... and [this](http://www.esc.nsw.gov.au/living-in/about/our-natural-environment/introduced-plants-and-animals/weeds/weed-profiles/patersons-curse-or-salvation-jane-echium-plantagineum/Echium-plantagineum-plant.jpg) is [*E. plantagineum*](http://www.invasives.org.za/legislation/item/243-patterson-s-curse-echium-plantagineum), a.k.a. Paterson's curse (photo credit in link)._
 
 My confusion likely arose because the book I consulted didn't have depictions of the branches or inflorescence structure, only the flowers and leaves separately. At least, that's what I remember. Either that or I wasn't observant enough and just blindly assumed it was *E. vulgare*.
 
@@ -22,7 +32,9 @@ And, to be honest, I'm still not 100% convinced of which I am seeing more often.
 
 What finally convinced me that I was indeed seeing *E. plantagineum* in some places was this:
 
-![I have seen it grow multiple times with white flowers! From the water's edge of a small pond/lake/park in my neighbourhood.](weed-id/Echium-vulgare-white.jpg)
+![](weed-id/Echium-vulgare-white.jpg)
+
+_I have seen it grow multiple times with white flowers! From the water's edge of a small pond/lake/park in my neighbourhood._
 
 Before explaining exactly how this proves that at least this population is *E. plantagineum*, I must expand on the interesting topic of these white flowers.
 
