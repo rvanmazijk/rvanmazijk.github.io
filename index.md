@@ -21,7 +21,7 @@ My MSc <!-- TODO: make mini-MSC-repo and link here --> in the Dept. of Biologica
 Some other things from my Honours year include:
 
 - An essay on [Gloger's ecogeographic rule](Glogers-rule-essay/essay.pdf) that I'm fairly proud of.
-- My first publication on [isotopic tracing of storm water in an urban South African river](http://dx.doi.org/10.4314/wsa.v44i4.16). It's free to read [here](https://www.researchgate.net/publication/328638225_Isotopic_tracing_of_stormwater_in_the_urban_Liesbeek_River). See also the open-access repository for the data-sets and analyses [here](https://github.com/rvanmazijk/Liesbeek-River-isotopics)
+- My first publication on [isotopic tracing of storm water in an urban South African river](http://dx.doi.org/10.4314/wsa.v44i4.16). It's free to read [here](https://www.researchgate.net/publication/328638225_Isotopic_tracing_of_stormwater_in_the_urban_Liesbeek_River). See also the open-access repository for the data-sets and analyses [here](https://github.com/rvanmazijk/Liesbeek-River-isotopics).
 
 ## Tutorials
 
