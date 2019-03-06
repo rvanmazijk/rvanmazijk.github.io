@@ -54,10 +54,10 @@ I have written a few tutorials about R and related tools for my colleagues at th
   </style>
   <div class="column"><!-- Twitter feed widget -->
     <a
-       class="twitter-timeline"
-       data-width="300"
-       data-height="600"
-       href="https://twitter.com/rvanmazijk?ref_src=twsrc%5Etfw"
+      class="twitter-timeline"
+      data-width="300"
+      data-height="600"
+      href="https://twitter.com/rvanmazijk?ref_src=twsrc%5Etfw"
     >
       Tweets by rvanmazijk
     </a>
