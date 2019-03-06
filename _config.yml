@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 markdown: kramdown
-title: "About the scientist: <br><i>Ruan van Mazijk</i>"
+title: "Ruan van Mazijk"
 description: |
   <p>
     <img src="face2.jpg"     width="50" height="50" />
@@ -8,7 +8,7 @@ description: |
     <img src="logos/BIO.png" width="50" height="50" />
   </p>
   <p>
-    Hi! I'm Ruan, a South African ecology and evolutionary biology Masters student at the <a href="http://www.biologicalsciences.uct.ac.za/">Dept. of Biological Sciences</a>, <a href="http://www.uct.ac.za/">University of Cape Town</a> (UCT).
+    A South African ecology and evolutionary biology Masters student at the <a href="http://www.biologicalsciences.uct.ac.za/">Dept. of Biological Sciences</a>, <a href="http://www.uct.ac.za/">University of Cape Town</a> (UCT).
   </p>
   <a
     class="twitter-timeline"
