@@ -1,5 +1,7 @@
 ---
 title: "The clovers (Fabaceae: *Trifolium* spp.)"
+author: Ruan van Mazijk
+layout: post
 ---
 
 ~~A serial theme for blog posts sounds like the kind of thing I'd like to busy myself with--why not write about groups I've been reading about?~~ Edit: I never made more than one of these clade-focussed posts. Oh well!
