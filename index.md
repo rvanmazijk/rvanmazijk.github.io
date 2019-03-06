@@ -6,28 +6,29 @@ A short version of my CV is [here](cv/RvanMazijk_CV_1page.pdf), and a more compr
 
 I am also on [ResearchGate](https://www.researchgate.net/profile/Ruan_Van_Mazijk).
 
-<!-- ResearchGate widget -->
-<script>
-  (function() {
-    var st = document.createElement('script');
-    st.type = 'text/javascript';
-    st.async = true;
-    st.src =
-      'https://www.researchgate.net/javascript/plugin/plugin-api-min.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(st, s);
-  })();
-</script>
-<div
-  class="rg-plugin"
-  data-stats="true"
-  data-faces="true"
-  data-publications="true"
-  data-width="500" data-height="300"
-  data-theme="light"
-  data-type="department"
-  data-installationId="5b47782e3cdd325b301e74f9"
-/>
+<div> <!-- ResearchGate widget -->
+  <script>
+    (function() {
+      var st = document.createElement('script');
+      st.type = 'text/javascript';
+      st.async = true;
+      st.src =
+        'https://www.researchgate.net/javascript/plugin/plugin-api-min.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(st, s);
+    })();
+  </script>
+  <div
+    class="rg-plugin"
+    data-stats="true"
+    data-faces="true"
+    data-publications="true"
+    data-width="500" data-height="300"
+    data-theme="light"
+    data-type="department"
+    data-installationId="5b47782e3cdd325b301e74f9"
+  />
+</div>
 
 ## Projects & publications
 
