@@ -79,7 +79,7 @@ I have written a few tutorials about R and related tools for my colleagues at th
         s.parentNode.insertBefore(st, s);
       })();
     </script>
-		<div
+    <div
       class="rg-plugin"
       data-stats="true"
       data-faces="true"
