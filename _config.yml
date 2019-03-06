@@ -1,3 +1,4 @@
-title: "About the scientist: <br><i>Ruan van Mazijk</i>"
-markdown: kramdown
 theme: jekyll-theme-minimal
+markdown: kramdown
+title: "About the scientist: <br><i>Ruan van Mazijk</i>"
+description: foo
