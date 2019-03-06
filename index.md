@@ -1,3 +1,8 @@
+---
+title: foo
+layout: post
+---
+
 ## About the scientist
 
 I am most fascinated by phylogenetic systematics, plant ecophysiology, phylogenetic ecology and evolutionary biology in general. Find me as @rvanmazijk on <img src="logos/Twitter.png" width="16" height="16"> [Twitter](https://twitter.com/rvanmazijk) and <img src="logos/GitHub.png" width="16" height="16"> [Github](https://github.com/rvanmazijk).
