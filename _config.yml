@@ -2,6 +2,20 @@ theme: jekyll-theme-minimal
 markdown: kramdown
 title: "About the scientist: <br><i>Ruan van Mazijk</i>"
 description: |
+  <p>
+    <img src="face2.jpg"     width="100" height="50" />
+    <img src="logos/UCT.png" width="100" height="50" />
+    <img src="logos/BIO.png" width="100" height="50" />
+  </p>
+  <p>
+    Hi! I'm Ruan, a South African ecology and evolutionary biology Masters student at the Dept. of Biological Sciences, University of Cape Town (UCT).
+  </p>
+  <p>
+    I am most fascinated by phylogenetic systematics, plant ecophysiology, phylogenetic ecology and evolutionary biology in general. Find me as @rvanmazijk on <img src="logos/Twitter.png" width="16" height="16"> [Twitter](https://twitter.com/rvanmazijk) and <img src="logos/GitHub.png" width="16" height="16"> [Github](https://github.com/rvanmazijk).
+  </p>
+  <p>
+    A short version of my CV is [here](cv/RvanMazijk_CV_1page.pdf), and a more comprehensive one [here](cv/RvanMazijk_CV_full.pdf).
+  </P>
   <a
     class="twitter-timeline"
     data-width="300"
