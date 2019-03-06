@@ -46,7 +46,7 @@ I have written a few tutorials about R and related tools for my colleagues at th
       width: 50%;
     }
     /* Clear floats after the columns */
-  	.row:after {
+    .row:after {
       content: "";
       display: table;
       clear: both;
@@ -68,7 +68,7 @@ I have written a few tutorials about R and related tools for my colleagues at th
     ></script>
   </div>
   <div class="column"> <!-- ResearchGate widget -->
-	  <script>
+    <script>
       (function() {
         var st = document.createElement('script');
         st.type = 'text/javascript';
