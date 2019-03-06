@@ -1,5 +1,7 @@
 ---
 title: "What determines a species range? Thoughts about SDMs and niches"
+author: "Ruan van Mazijk"
+format: post
 ---
 
 I’ve been thinking a lot about species distribution models, and biogeography in general, lately.
