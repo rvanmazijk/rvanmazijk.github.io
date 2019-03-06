@@ -6,30 +6,6 @@ A short version of my CV is [here](cv/RvanMazijk_CV_1page.pdf), and a more compr
 
 I am also on [ResearchGate](https://www.researchgate.net/profile/Ruan_Van_Mazijk).
 
-<div> <!-- ResearchGate widget -->
-  <script>
-    (function() {
-      var st = document.createElement('script');
-      st.type = 'text/javascript';
-      st.async = true;
-      st.src =
-        'https://www.researchgate.net/javascript/plugin/plugin-api-min.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(st, s);
-    })();
-  </script>
-  <div
-    class="rg-plugin"
-    data-stats="true"
-    data-faces="true"
-    data-publications="true"
-    data-width="500" data-height="300"
-    data-theme="light"
-    data-type="department"
-    data-installationId="5b47782e3cdd325b301e74f9"
-  />
-</div>
-
 ## Projects & publications
 
 My MSc <!-- TODO: make mini-MSC-repo and link here --> in the Dept. of Biological Sciences, UCT, has me investigating the links between genome size and ecophysiological limitations, such as water-use efficiency, in the sedge genera _Schoenus_ L. and _Tetraria_ Beauv (Cyperaceae, Tribe Schoeneae), all fynbos species in the Cape Floristic Region. I'm using morphological, physiological and phenological data to ascertain how (or if) rampant polyploidisation events in the _Schoenus_ lineage affect those species' ecologies. My supervisors are Associate Profs [Muthama Muasya](https://www.researchgate.net/profile/A_Muasya), [Tony Verboom](https://www.researchgate.net/profile/George_Verboom) and [Adam West](https://www.researchgate.net/profile/Adam_West3). See the ResearchGate project [here](https://www.researchgate.net/project/Genome-size-water-use-ecophysiology-habitat-phenology-in-Cape-Schoenoid-sedges-Cyperaceae-Schoeneae).
@@ -53,3 +29,28 @@ I have written a few tutorials about R and related tools for my colleagues at th
 - [What determines a species range? Thoughts about SDMs and niches](posts/sdms-and-niches.md)
 - [Identifying and thinking about a weed](posts/weed-id.md)
 - [The clovers (Fabaceae: *Trifolium* spp.)](posts/clovers.md)
+
+<div> <!-- ResearchGate widget -->
+  <script>
+    (function() {
+      var st = document.createElement('script');
+      st.type = 'text/javascript';
+      st.async = true;
+      st.src =
+        'https://www.researchgate.net/javascript/plugin/plugin-api-min.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(st, s);
+    })();
+  </script>
+  <div
+    class="rg-plugin"
+    data-stats="true"
+    data-faces="true"
+    data-publications="true"
+    data-width="500" data-height="500"
+    data-theme="light"
+    data-type="department"
+    data-installationId="5b47782e3cdd325b301e74f9"
+  />
+</div>
+
