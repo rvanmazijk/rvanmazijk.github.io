@@ -1,5 +1,3 @@
-# About the scientist: _Ruan van Mazijk_
-
 <img src="face2.jpg"     width="100" height="100" />
 <img src="logos/UCT.png" width="100" height="100" />
 <img src="logos/BIO.png" width="100" height="100" />
