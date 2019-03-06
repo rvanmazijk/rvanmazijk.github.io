@@ -1,4 +1,17 @@
 theme: jekyll-theme-minimal
 markdown: kramdown
 title: "About the scientist: <br><i>Ruan van Mazijk</i>"
-description: foo
+description: |
+  <a
+    class="twitter-timeline"
+    data-width="300"
+    data-height="600"
+    href="https://twitter.com/rvanmazijk?ref_src=twsrc%5Etfw"
+  >
+    Tweets by rvanmazijk
+  </a>
+  <script
+    async
+    src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"
+  ></script>
