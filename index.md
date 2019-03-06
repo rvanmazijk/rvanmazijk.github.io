@@ -47,7 +47,7 @@ I have written a few tutorials about R and related tools for my colleagues at th
     data-stats="true"
     data-faces="true"
     data-publications="true"
-    data-width="500" data-height="500"
+    data-width="600" data-height="600"
     data-theme="light"
     data-type="department"
     data-installationId="5b47782e3cdd325b301e74f9"
