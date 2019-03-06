@@ -23,7 +23,7 @@ My MSc has me investigating the links between genome size and ecophysiological l
 Some other things from my Honours year:
 
 - An essay on [Gloger's ecogeographic rule](Glogers-rule-essay/essay.pdf) that I'm fairly proud of.
-- <!--A publication in review, on isotopic tracing of storm water in an urban South African river-->
+- <!-- A publication in review, on isotopic tracing of storm water in an urban South African river -->
 
 ## Tutorials
 
@@ -61,4 +61,7 @@ I have written a few tutorials about R and related tools for my colleagues at th
 />
 
 <!-- Twitter feed widget -->
-<a class="twitter-timeline" href="https://twitter.com/rvanmazijk?ref_src=twsrc%5Etfw">Tweets by rvanmazijk</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div>
+  <a class="twitter-timeline" href="https://twitter.com/rvanmazijk?ref_src=twsrc%5Etfw">Tweets by rvanmazijk</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
