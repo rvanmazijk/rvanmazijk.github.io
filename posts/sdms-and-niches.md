@@ -1,4 +1,6 @@
-# What determines a species range? Thoughts about SDMs and niches
+---
+title: "What determines a species range? Thoughts about SDMs and niches"
+---
 
 I’ve been thinking a lot about species distribution models, and biogeography in general, lately.
 
