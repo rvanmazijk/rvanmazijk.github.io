@@ -1,4 +1,6 @@
-# The clovers (Fabaceae: *Trifolium* spp.)
+---
+title: "The clovers (Fabaceae: *Trifolium* spp.)"
+---
 
 ~~A serial theme for blog posts sounds like the kind of thing I'd like to busy myself with--why not write about groups I've been reading about?~~ Edit: I never made more than one of these clade-focussed posts. Oh well!
 
@@ -14,13 +16,21 @@ There isn't an awful lot more I'd like to say, as my interest in clovers is quit
 
 And boy, do I think they look cool. Here are some that I've seen in my surrounds (with some dubious identifications--I mostly used Wikipedia)
 
-![These puffy yellow delightful clovers may be *T. campestre*? Or *T. aureum*? I haven't stumbled upon others online that look more similar to it.](clovers/clover1.jpg)
+![](clovers/clover1.jpg)
 
-![I think these are definitely *T. dubium*---the little hop clover. This is accepted to be the famous traditional Irish shamrock. They grow in abundance on my lawn, and are very fun to get up close to with a macro lens. It's very exciting to find things this beautiful growing all around you.](clovers/clover2.jpg)
+_These puffy yellow delightful clovers may be *T. campestre*? Or *T. aureum*? I haven't stumbled upon others online that look more similar to it._
 
-![This photo is not my own (from [Wikipedia](https://en.wikipedia.org/wiki/Trifolium_repens#/media/File:Starr_070313-5645_Trifolium_repens.jpg)), but I see this growing all around town. *T. repens*, the dutch or white clover, makes an exciting site, making large patches of white against green.](clovers/clover3.jpg)
+![](clovers/clover2.jpg)
 
-![And then there's this one from my neighbourhood. I've seen it in reserves too, next to paths. It's got quite narrow leaflets, and a hairy inflorescence, with pink, narrow flowers.](clovers/clover4.jpg)
+_I think these are definitely *T. dubium*---the little hop clover. This is accepted to be the famous traditional Irish shamrock. They grow in abundance on my lawn, and are very fun to get up close to with a macro lens. It's very exciting to find things this beautiful growing all around you._
+
+![](clovers/clover3.jpg)
+
+_This photo is not my own (from [Wikipedia](https://en.wikipedia.org/wiki/Trifolium_repens#/media/File:Starr_070313-5645_Trifolium_repens.jpg)), but I see this growing all around town. *T. repens*, the dutch or white clover, makes an exciting site, making large patches of white against green._
+
+![](clovers/clover4.jpg)
+
+_And then there's this one from my neighbourhood. I've seen it in reserves too, next to paths. It's got quite narrow leaflets, and a hairy inflorescence, with pink, narrow flowers._
 
 And there are many more species, of course! Have a Google of "clovers" and "*Trifolium*", and you'll find a lot of very beautiful flowers--red, pink, white, long, round, thin, bright, or subtle.
 
@@ -31,7 +41,3 @@ And there are many more species, of course! Have a Google of "clovers" and "*Tri
 ## References
 
 Ellison, N.W., Liston, A., Steiner, J.J., Williams, W.M. & Taylor, N.L., 2006. Molecular phylogenetics of the clover genus (*Trifolium*---Leguminosae). *Molecular Phylogenetics & Evolution*, 39(3): 688---705.
-
-
-
-
