@@ -14,16 +14,16 @@ A short version of my CV is [here](cv/RvanMazijk_CV_1page.pdf), and a more compr
 
 I am also on [ResearchGate](https://www.researchgate.net/profile/Ruan_Van_Mazijk) (see below).
 
-## Projects
+## Projects & publications
 
-My MSc has me investigating the links between genome size and ecophysiological limitations, such as water-use efficiency, in the Cape Schoenoid sedge genera *Schoenus* and *Tetraria*. I'm using morphological, physiological and phenological data to ascertain how (or if) rampant polyploidisation events in the *Schoenus* lineage affect those species' ecologies.
+My MSc <!-- TODO: make mini-MSC-repo and link here --> has me investigating the links between genome size and ecophysiological limitations, such as water-use efficiency, in the Cape Schoenoid sedge genera _Schoenus_ L. and _Tetraria_ Beauv (Cyperaceae, Tribe Schoeneae). I'm using morphological, physiological and phenological data to ascertain how (or if) rampant polyploidisation events in the _Schoenus_ lineage affect those species' ecologies.
 
-[My largest side-project](Cape-vs-SWA/), carrying on from my BSc Hons work, ...
+[My largest side-project](Cape-vs-SWA/) carries on from my BSc Hons work with Associate Prof Tony Verboom and Prof Mike Cramer. It's a macro-ecology project, where we aim to quantify how environmental heterogeneity relates to patterns of plant species richness and turnover in the Greater Cape Floristic Region and in the Southwest Australia Floristic Region. We compare the environmental heterogeneity in each region, how species richness and turnover interact in each region to produce the observed patterns of richness, and what different forms of environmental heterogeneity better predict richness in each region. This is currently a publication in prep. for submission to the Journal of Biogeography.
 
-Some other things from my Honours year:
+Some other things from my Honours year include:
 
 - An essay on [Gloger's ecogeographic rule](Glogers-rule-essay/essay.pdf) that I'm fairly proud of.
-- <!-- A publication in review, on isotopic tracing of storm water in an urban South African river -->
+- My first publication on [isotopic tracing of storm water in an urban South African river](http://dx.doi.org/10.4314/wsa.v44i4.16). It's free to read [here](https://www.researchgate.net/publication/328638225_Isotopic_tracing_of_stormwater_in_the_urban_Liesbeek_River). See also the open-access repository for the data-sets and analyses [here](https://github.com/rvanmazijk/Liesbeek-River-isotopics)
 
 ## Tutorials
 
