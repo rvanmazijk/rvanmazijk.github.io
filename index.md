@@ -1,7 +1,7 @@
 # About the scientist: _Ruan van Mazijk_
 
-<img src="face2.jpg"     width="100" height="100" /> 
-<img src="logos/UCT.png" width="100" height="100" /> 
+<img src="face2.jpg"     width="100" height="100" />
+<img src="logos/UCT.png" width="100" height="100" />
 <img src="logos/BIO.png" width="100" height="100" />
 
 **Please note, this website is still a work-in-progress**
@@ -52,7 +52,7 @@ I have written a few tutorials about R and related tools for my colleagues at th
       clear: both;
     }
   </style>
-  <div class="column"><!-- Twitter feed widget -->
+  <div class="column"> <!-- Twitter feed widget -->
     <a
       class="twitter-timeline"
       data-width="300"
