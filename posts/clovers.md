@@ -1,6 +1,6 @@
 ---
 title: "The clovers (Fabaceae: *Trifolium* spp.)"
-author: Ruan van Mazijk
+author: "Ruan van Mazijk"
 layout: post
 ---
 
