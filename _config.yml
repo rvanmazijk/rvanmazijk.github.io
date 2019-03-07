@@ -15,12 +15,16 @@ description: |
     <a href="http://www.uct.ac.za/">University of Cape Town</a> (UCT).
   </p>
   <p>
-    <img 
-      src="https://github.com/rvanmazijk/rvanmazijk.github.io/raw/master/logos/UCT.png"
-      width="75" height="75"
-    />
-    <img
-      src="https://github.com/rvanmazijk/rvanmazijk.github.io/raw/master/logos/BIO.png"
-      width="75" height="75"
-    />
+    <a href="http://www.uct.ac.za/">
+      <img 
+        src="https://github.com/rvanmazijk/rvanmazijk.github.io/raw/master/logos/UCT.png"
+        width="75" height="75"
+      />
+    </a>
+    <a href="http://www.biologicalsciences.uct.ac.za/">
+      <img
+        src="https://github.com/rvanmazijk/rvanmazijk.github.io/raw/master/logos/BIO.png"
+        width="75" height="75"
+      />
+    </a>
   </p>
