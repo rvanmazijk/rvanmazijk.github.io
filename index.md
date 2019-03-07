@@ -1,3 +1,9 @@
+<div class="blog-index">  
+  {% assign post = site.posts.first %}
+  {% assign content = post.content %}
+  {% include post_detail.html %}
+</div>
+
 ## About the scientist
 
 I am a Masters student in the Dept. of Biological Sciences at the University of Cape Town (UCT), where I happily work on all hings ecology and evolutionary biology, particularly in plants. I am lucky to work in the centre of a floristically megadiverse part of the world, the Cape Floristic Region (CFR), in the southwestern Cape of South Africa.
