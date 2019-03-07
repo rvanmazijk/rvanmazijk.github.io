@@ -2,4 +2,4 @@ theme: jekyll-theme-minimal
 markdown: kramdown
 title: "Ruan van Mazijk"
 logo: face2.jpg
-description: _description.html
+description: "<div w3-include-html='_description.html'></div>"
