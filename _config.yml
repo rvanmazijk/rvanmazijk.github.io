@@ -9,7 +9,18 @@ description: |
     <a href="http://www.uct.ac.za/">University of Cape Town</a> (UCT).
   </p>
   <div class="row">
-    <link rel="stylesheet" href="column-style.css">
+    <style>
+      .column {
+        float: left;
+        width: 50%;
+      }
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
     <div class="column">
       <a href="http://www.uct.ac.za/">
         <img src="https://rvanmazijk.github.io/logos/UCT.png" width="50" height="50" />

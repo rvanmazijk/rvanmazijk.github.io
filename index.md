@@ -19,54 +19,10 @@ During my Honours year I also wrote an essay on [Gloger's ecogeographic rule](Gl
 I have written a few tutorials about R and related tools for my colleagues at the Dept. of Biological Sciences, UCT.
 
 - [R tutorial](R-tut-for-Muasya-lab/), for the Muasya Lab
-- [An introduction to R Markdown](Rmd-tut-for-West-lab), for the West Lab
+- [An introduction to R Markdown](Rmd-tut-for-West-lab/), for the West Lab
 
 ## Migrated posts from Blogspot
 
 - [What determines a species range? Thoughts about SDMs and niches](migrated-from-Blogspot/sdms-and-niches.md)
 - [Identifying and thinking about a weed](migrated-from-Blogspot/weed-id/weed-id.md)
 - [The clovers (Fabaceae: _Trifolium_ spp.)](migrated-from-Blogspot/clovers/clovers.md)
-
-<!-- Twitter feed & ResearchGate widgets
-<div class="row">
-  <link rel="stylesheet" href="column-style.css">
-  <div class="column">
-    <a 
-      class="twitter-timeline"
-      data-width="300" 
-      data-height="600"
-      href="https://twitter.com/rvanmazijk?ref_src=twsrc%5Etfw"
-    >
-      Tweets by rvanmazijk
-    </a>
-    <script
-      async
-      src="https://platform.twitter.com/widgets.js"
-      charset="utf-8"
-    ></script>
-  </div>
-  <div class="column">
-    <script>
-      (function() {
-        var st = document.createElement('script');
-        st.type = 'text/javascript';
-        st.async = true;
-        st.src =
-          'https://www.researchgate.net/javascript/plugin/plugin-api-min.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(st, s);
-      })();
-    </script>
-    <div
-      class="rg-plugin"
-      data-stats="true"
-      data-faces="true"
-      data-publications="true"
-      data-width="300" data-height="600"
-      data-theme="light"
-      data-type="department"
-      data-installationId="5b47782e3cdd325b301e74f9"
-    />
-  </div>
-</div>
--->
