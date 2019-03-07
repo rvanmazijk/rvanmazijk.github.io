@@ -23,14 +23,13 @@ I have written a few tutorials about R and related tools for my colleagues at th
 
 ## Migrated posts from Blogspot
 
-- [What determines a species range? Thoughts about SDMs and niches](_posts/migrated-from-Blogspot/sdms-and-niches.md)
-- [Identifying and thinking about a weed](_posts/migrated-from-Blogspot/weed-id/weed-id.md)
-- [The clovers (Fabaceae: _Trifolium_ spp.)](_posts/migrated-from-Blogspot/clovers/clovers.md)
+- [What determines a species range? Thoughts about SDMs and niches](migrated-from-Blogspot/sdms-and-niches.md)
+- [Identifying and thinking about a weed](migrated-from-Blogspot/weed-id/weed-id.md)
+- [The clovers (Fabaceae: _Trifolium_ spp.)](migrated-from-Blogspot/clovers/clovers.md)
 
 <!-- Twitter feed & ResearchGate widgets
 <div class="row">
   <link rel="stylesheet" href="column-style.css">
-  <!-- Twitter feed widget --!>
   <div class="column">
     <a 
       class="twitter-timeline"
@@ -46,7 +45,6 @@ I have written a few tutorials about R and related tools for my colleagues at th
       charset="utf-8"
     ></script>
   </div>
-  <!-- ResearchGate widget --!>
   <div class="column">
     <script>
       (function() {
