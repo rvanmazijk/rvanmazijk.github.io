@@ -12,10 +12,10 @@ description: |
     <link rel="stylesheet" href="column-style.css">
     <div class="column">
       <a href="http://www.uct.ac.za/">
-        <img src="https://rvanmazijk.github.io/logos/UCT.png" width="75" height="75" />
-      </a><br>
+        <img src="https://rvanmazijk.github.io/logos/UCT.png" width="50" height="50" />
+      </a>
       <a href="http://www.biologicalsciences.uct.ac.za/">
-        <img src="https://rvanmazijk.github.io/logos/BIO.png" width="75" height="75" />
+        <img src="https://rvanmazijk.github.io/logos/BIO.png" width="50" height="50" />
       </a>
     </div>
     <div class="column">
