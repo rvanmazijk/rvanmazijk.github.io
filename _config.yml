@@ -2,18 +2,10 @@ theme: jekyll-theme-minimal
 markdown: kramdown
 title: "Ruan van Mazijk"
 description: |
-  <img src="https://github.com/rvanmazijk/rvanmazijk.github.io/raw/master/face2.jpg" width="100" height="100" /><br>
-  A South African ecology and evolutionary biology Masters student at the <a href="http://www.biologicalsciences.uct.ac.za/">Dept. of Biological Sciences</a>, <a href="http://www.uct.ac.za/">University of Cape Town</a> (UCT).<br>
-  <a
-    class="twitter-timeline"
-    data-width="300"
-    data-height="500"
-    href="https://twitter.com/rvanmazijk?ref_src=twsrc%5Etfw"
-  >
-    Tweets by rvanmazijk
-  </a>
-  <script
-    async
-    src="https://platform.twitter.com/widgets.js"
-    charset="utf-8"
-  ></script>
+  <img
+    src="https://github.com/rvanmazijk/rvanmazijk.github.io/raw/master/face2.jpg"
+    width="100" height="100"
+  /><br>
+  A South African ecology and evolutionary biology Masters student at the
+  <a href="http://www.biologicalsciences.uct.ac.za/">Dept. of Biological Sciences</a>,
+  <a href="http://www.uct.ac.za/">University of Cape Town</a> (UCT).
