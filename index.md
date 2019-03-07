@@ -23,6 +23,52 @@ I have written a few tutorials about R and related tools for my colleagues at th
 
 ## Migrated posts from Blogspot
 
-- [What determines a species range? Thoughts about SDMs and niches](posts/sdms-and-niches.md)
-- [Identifying and thinking about a weed](posts/weed-id.md)
-- [The clovers (Fabaceae: *Trifolium* spp.)](posts/clovers.md)
+- [What determines a species range? Thoughts about SDMs and niches](_posts/migrated-from-Blogspot/sdms-and-niches.md)
+- [Identifying and thinking about a weed](_posts/migrated-from-Blogspot/weed-id/weed-id.md)
+- [The clovers (Fabaceae: _Trifolium_ spp.)](_posts/migrated-from-Blogspot/clovers/clovers.md)
+
+<!-- Twitter feed & ResearchGate widgets
+<div class="row">
+  <link rel="stylesheet" href="column-style.css">
+  <!-- Twitter feed widget --!>
+  <div class="column">
+    <a 
+      class="twitter-timeline"
+      data-width="300" 
+      data-height="600"
+      href="https://twitter.com/rvanmazijk?ref_src=twsrc%5Etfw"
+    >
+      Tweets by rvanmazijk
+    </a>
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+  </div>
+  <!-- ResearchGate widget --!>
+  <div class="column">
+    <script>
+      (function() {
+        var st = document.createElement('script');
+        st.type = 'text/javascript';
+        st.async = true;
+        st.src =
+          'https://www.researchgate.net/javascript/plugin/plugin-api-min.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(st, s);
+      })();
+    </script>
+    <div
+      class="rg-plugin"
+      data-stats="true"
+      data-faces="true"
+      data-publications="true"
+      data-width="300" data-height="600"
+      data-theme="light"
+      data-type="department"
+      data-installationId="5b47782e3cdd325b301e74f9"
+    />
+  </div>
+</div>
+-->
