@@ -1,8 +1,5 @@
 ## About the scientist
 
-<img src="logos/UCT.png" width="75" height="75" />
-<img src="logos/BIO.png" width="75" height="75" />
-
 I am a Masters student in the Dept. of Biological Sciences at the University of Cape Town (UCT), where I happily work on all hings ecology and evolutionary biology, particularly in plants. I am lucky to work in the centre of a floristically megadiverse part of the world, the Cape Floristic Region (CFR), in the southwestern Cape of South Africa.
 
 I am most fascinated by phylogenetic systematics, plant ecophysiology, phylogenetic ecology and evolutionary biology in general. Find me as @rvanmazijk on <img src="logos/Twitter.png" width="16" height="16"> [Twitter](https://twitter.com/rvanmazijk) and <img src="logos/GitHub.png" width="16" height="16"> [Github](https://github.com/rvanmazijk).
