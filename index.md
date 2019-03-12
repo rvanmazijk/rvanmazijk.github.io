@@ -7,7 +7,9 @@ A short version of my CV is [here](cv/RvanMazijk_CV_1page.pdf), and a more compr
 ## Recent posts
 
 <ul>
-  {% for post in site.posts %}
+  <!-- 10 newest posts (code based on <https://github.com/alshedivat/al-folio/blob/master/_includes/news.html>) -->
+  {% assign posts = site.posts | reverse %}
+  {% for post in posts limit: 10 %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
