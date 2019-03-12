@@ -1,4 +1,4 @@
-theme: mmistakes/minimal-mistakes
+remote_theme: mmistakes/minimal-mistakes
 markdown: kramdown
 title: "Ruan van Mazijk"
 logo: face2.jpg
