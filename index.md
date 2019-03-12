@@ -7,7 +7,7 @@ A short version of my CV is [here](cv/RvanMazijk_CV_1page.pdf), and a more compr
 ## Recent posts
 
 <ul>
-  {% for post in site.posts[1..10] %}
+  {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
