@@ -1,5 +1,6 @@
 remote_theme: mmistakes/minimal-mistakes
 markdown: kramdown
+plugins: jekyll-include-cache
 title: "Ruan van Mazijk"
 logo: face2.jpg
 description: |
