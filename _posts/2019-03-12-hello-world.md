@@ -1,6 +1,6 @@
 ---
 title: "Hello, world"
-author "Ruan van Mazijk"
+author: "Ruan van Mazijk"
 layout: post
 ---
 
