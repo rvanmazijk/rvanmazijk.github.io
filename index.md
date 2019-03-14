@@ -11,7 +11,7 @@ A short version of my CV is [here](cv/RvanMazijk_CV_1page.pdf), and a more compr
   {% assign posts = site.posts | reverse %}
   {% for post in posts limit: 10 %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a> <i>{{ post.date }}</i>
+      <a href="{{ post.url }}">{{ post.title }}</a> <i>{{ post.date | date: "%Y-%m-%d }}</i>
     </li>
   {% endfor %}
 </ul>
