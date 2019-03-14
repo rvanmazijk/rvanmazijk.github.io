@@ -2,7 +2,7 @@
 
 I am a Masters student in the Dept. of Biological Sciences at the University of Cape Town (UCT), where I happily work on all hings ecology and evolutionary biology, particularly in plants. I am lucky to work in the centre of a floristically megadiverse part of the world, the Cape Floristic Region (CFR), in the southwestern Cape of South Africa. I am most fascinated by phylogenetic systematics, plant ecophysiology, phylogenetic ecology and evolutionary biology in general.
 
-A short version of my CV is available as PDF [here](cv/RvanMazijk_CV_1page.pdf), and a more comprehensive one [here](cv/RvanMazijk_CV_full.pdf). You can also see the comprehensive CV in-browser [here](cv/RvanMazijk_CV_full.md).
+A short version of my CV is available as PDF [here](cv/RvanMazijk_CV_1page.pdf), and a more comprehensive one [here](cv/RvanMazijk_CV_full.pdf). You can also see the comprehensive CV in-browser [here](cv/RvanMazijk_CV_full).
 
 ## Recent posts
 
@@ -11,7 +11,7 @@ A short version of my CV is available as PDF [here](cv/RvanMazijk_CV_1page.pdf),
   {% assign posts = site.posts | reverse %}
   {% for post in posts limit: 10 %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a> <i>{{ post.date | date: "%Y-%m-%d" }}</i>
+      {{ post.date | date: "%Y-%m-%d" }} <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
