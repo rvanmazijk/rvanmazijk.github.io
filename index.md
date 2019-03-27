@@ -34,9 +34,3 @@ I have written a few tutorials about R and related tools for my colleagues at th
 
 - [R tutorial](R-tut-for-Muasya-lab/), for the Muasya Lab
 - [An introduction to R Markdown](Rmd-tut-for-West-lab/), for the West Lab
-
-## Migrated posts from Blogspot
-
-- [What determines a species range? Thoughts about SDMs and niches](migrated-from-Blogspot/sdms-and-niches.md)
-- [Identifying and thinking about a weed](migrated-from-Blogspot/weed-id/weed-id.md)
-- [The clovers (Fabaceae: _Trifolium_ spp.)](migrated-from-Blogspot/clovers/clovers.md)
