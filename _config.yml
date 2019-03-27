@@ -11,7 +11,7 @@ url                      : "https://rvanmazijk.github.io"
 baseurl                  : 
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "face2.jpg"
+logo                     : 
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -70,7 +70,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : rvanmazijk
+  username               : "rvanmazijk"
 facebook:
   username               :
   app_id                 :
@@ -95,8 +95,30 @@ analytics:
 author:
   name             : "Ruan van Mazijk"
   avatar           : "face2.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : |
+    <p>
+      An ecology and evolutionary biology Masters student at the
+      <a href="http://www.biologicalsciences.uct.ac.za/">Dept. of Biological Sciences</a>,
+      <a href="http://www.uct.ac.za/">University of Cape Town</a> (UCT).
+    </p>
+    <p>
+      <a href="http://www.uct.ac.za/">
+        <img src="https://rvanmazijk.github.io/logos/UCT.png" width="60" height="60" />
+      </a>
+      <a href="http://www.biologicalsciences.uct.ac.za/">
+        <img src="https://rvanmazijk.github.io/logos/BIO.png" width="60" height="60" />
+      </a>
+      <img src="https://rvanmazijk.github.io/logos/SASSB.png" width="60" height="48" />
+    </p>
+    <p>
+      <a href="https://twitter.com/rvanmazijk">
+        <img src="https://rvanmazijk.github.io/logos/Twitter.png" width="16" height="16" /> @rvanmazijk
+      </a>
+      <a href="https://www.researchgate.net/profile/Ruan_Van_Mazijk">
+        <img src="logos/ResearchGate-green.jpg" width="16" height="16" /> ResearchGate
+      </a>
+    </p>
+  location         : "Cape Town, South Africa"
   email            : "rvanmazijk@gmail.com"
   links:
     - label: "Email"
