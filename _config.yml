@@ -1,6 +1,8 @@
 theme: jekyll-theme-minimal
 markdown: kramdown
-title: "Ruan van Mazijk"
+title: "A Botanist's Blog"
+title_separator: "|"
+name: "Ruan van Mazijk"
 logo: face2.jpg
 description: |
   <p>
