@@ -25,3 +25,6 @@ description: |
       <img src="logos/ResearchGate-green.jpg" width="16" height="16" /> ResearchGate
     </a>
   </p>
+plugins: 
+  - jekyll-include-cache
+remote_theme: "mmistakes/minimal-mistakes@4.15.2"
