@@ -8,7 +8,7 @@ title_separator          : "|"
 name                     : "Ruan van Mazijk"
 description              : "An amazing website."
 url                      : "https://rvanmazijk.github.io"
-baseurl                  : "/blog"
+baseurl                  : 
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "face2.jpg"
@@ -70,7 +70,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : rvanmazijk
 facebook:
   username               :
   app_id                 :
@@ -93,11 +93,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  name             : "Ruan van Mazijk"
+  avatar           : "face2.jpg"
   bio              : "I am an amazing person."
   location         : "Somewhere"
-  email            :
+  email            : "rvanmazijk@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
