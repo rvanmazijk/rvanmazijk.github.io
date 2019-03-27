@@ -1,7 +1,7 @@
 ---
 title: "Hello, world"
 author: "Ruan van Mazijk"
-layout: post
+layout: single
 ---
 
 Hello, world.
