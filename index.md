@@ -10,7 +10,7 @@ A short version of my CV is available as PDF [here](cv/RvanMazijk_CV_1page.pdf),
 
 <ul>
   <!-- 10 newest posts (code based on <https://github.com/alshedivat/al-folio/blob/master/_includes/news.html>) -->
-  {% assign posts = site.posts | reverse %}
+  {% assign posts = site.posts %}
   {% for post in posts limit: 10 %}
     <li>
       {{ post.date | date: "%Y-%m-%d" }} <a href="{{ post.url }}">{{ post.title }}</a>
