@@ -1,0 +1,44 @@
+---
+title: "Wrapping my head around circular means"
+author: "Ruan van Mazijk"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+For the first proper blog-post on this blog, I thought I'd share a recent statistical problem I've had as part of my Masters work.
+
+One of my chapters is about comparing patterns of growth and flowering phenology (the timing of these sorts of events during the year) across a few dozen species of sedge (Cyperaceae)---gramminoid plants common here in the fynbos in the Cape Floristic Region.
+
+For one analysis, I am comparing flowering data between six clades. The biological details are not the focus of this post. I am more interested (for the moment) in sharing the analytical approach I've learnt.
+
+Normally in ecology and related disciplines, when we wish to compare two or more distributions of values, we would employ a $t$-test or _ANOVA_. This is all very well if the values we wish to compare fall on a number line.
+
+This is not the case with phenological or seasonal data.
+
+# A small introduction to circular data
+
+A variable describing the time of year, time of day or season of an event is an example of _circular data_. A simple example of could involve one trying to estimate when, on average, people sleep.
+
+
+```{r sleep-example-1}
+sleeping <- c(
+  24, 23, 24, 23, 22, 24, 23, 21, 22, 24, 23, 20, 22, 23, 24, 24,
+  1, 2, 2, 1, 3, 2, 2, 2, 2, 3, 4, 4, 3, 3, 4, 5, 5, 6, 3, 2, 1
+)
+hist(sleeping,
+  breaks = 24,
+  xlab = "Time of day (hour)", ylab = "No. people sleeping",
+  main = ""
+)
+```
+
+From this made-up data it is clear that people sleep at night. But our go-to statistic, the mean, fails at describing this.
+
+```{r sleep-example-2}
+mean(sleeping)
+```
+
+Nobody was asleep at 11h30 in the afternoon! How do can we
