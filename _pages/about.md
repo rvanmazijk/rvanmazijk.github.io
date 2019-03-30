@@ -1,5 +1,6 @@
 ---
 title: "About the scientist"
+layout: single
 permalink: /about/
 ---
 
