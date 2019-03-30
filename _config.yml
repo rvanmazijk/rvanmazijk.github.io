@@ -95,28 +95,24 @@ analytics:
 author:
   name             : "Ruan van Mazijk"
   avatar           : "assets/images/face2.jpg"
-  bio              : <p>An ecology and evolutionary biology Masters student at the <a href="http://www.biologicalsciences.uct.ac.za/">Dept. of Biological Sciences</a>, <a href="http://www.uct.ac.za/">University of Cape Town</a> (UCT).</p><p><a href="https://www.researchgate.net/profile/Ruan_Van_Mazijk">ResearchGate</a></p>
+  bio              : >
+    An ecology and evolutionary biology Masters student
+    at the Dept. of Biological Science, University of Cape Town
   location         : "Cape Town, South Africa"
   email            : "rvanmazijk@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/rvanmazijk"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/rvanmazijk"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/rvanmazijk"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/rvanmazijk"
+    - label: "ResearchGate"
+      url: "https://www.researchgate.net/profile/Ruan_Van_Mazijk"
+
 
 # Site Footer
 footer:
