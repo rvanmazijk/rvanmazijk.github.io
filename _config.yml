@@ -111,6 +111,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/rvanmazijk"
     - label: "ResearchGate"
+      icon: "fab fa-fw fa-researchgate"
       url: "https://www.researchgate.net/profile/Ruan_Van_Mazijk"
 
 
