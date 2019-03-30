@@ -1,11 +1,9 @@
 main:
+  - title: "About the scientist"
+    url: /about/
+  - title: "Projects & publications"
+    url: /projects/
+  - title: "Tutorials & teaching"
+    url: /tutorials/
   - title: "Posts"
     url: /year-archive/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "Pages"
-    url: /page-archive/
-  - title: "Collections"
-    url: /collection-archive/
