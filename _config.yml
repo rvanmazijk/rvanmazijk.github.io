@@ -95,10 +95,7 @@ analytics:
 author:
   name             : "Ruan van Mazijk"
   avatar           : "assets/images/face2.jpg"
-  bio              : |
-    <p>An ecology and evolutionary biology Masters student at the <a href="http://www.biologicalsciences.uct.ac.za/">Dept. of Biological Sciences</a>, <a href="http://www.uct.ac.za/">University of Cape Town</a> (UCT).</p>
-    <p><a href="http://www.uct.ac.za/"><img src="/assets/images/logos/UCT.png" width="60px" height="60px" /></a> <a href="http://www.biologicalsciences.uct.ac.za/"><img src="/assets/images/logos/BIO.png" width="60px" height="60px" /></a> <img src="/assets/images/logos/SASSB.png" width="60px" height="48px" /></p>
-    <p><a href="https://twitter.com/rvanmazijk"><img src="/assets/images/logos/Twitter.png" width="16px" height="16px" /> @rvanmazijk</a> <a href="https://www.researchgate.net/profile/Ruan_Van_Mazijk"><img src="/assets/images/logos/ResearchGate-green.jpg" width="16px" height="16px" /> ResearchGate</a></p>
+  bio              : <p>An ecology and evolutionary biology Masters student at the <a href="http://www.biologicalsciences.uct.ac.za/">Dept. of Biological Sciences</a>, <a href="http://www.uct.ac.za/">University of Cape Town</a> (UCT).</p><p><a href="https://www.researchgate.net/profile/Ruan_Van_Mazijk">ResearchGate</a></p>
   location         : "Cape Town, South Africa"
   email            : "rvanmazijk@gmail.com"
   links:
