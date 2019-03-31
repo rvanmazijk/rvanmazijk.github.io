@@ -17,5 +17,4 @@ A short version of my CV is available as PDF [here](/cv/RvanMazijk_CV_1page.pdf)
 
 ## Contact
 
-Email: <ruanvmazijk@gmail.com>
-Office: +27 21 650 3684
+Email: <ruanvmazijk@gmail.com>, office: +27 21 650 3684
