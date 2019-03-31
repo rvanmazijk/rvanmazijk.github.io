@@ -119,9 +119,6 @@ author:
     - label: "Mendeley"
       icon : "fab fa-fw fa-mendeley"
       url  : "https://www.mendeley.com/profiles/ruan-van-mazijk/"
-    - label: "ORCID"
-      icon : "fab fa-fw fa-orcid"
-      url  : "https://orcid.org/0000-0003-2659-6909"
 
 
 # Site Footer
