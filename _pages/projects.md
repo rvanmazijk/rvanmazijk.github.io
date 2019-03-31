@@ -1,6 +1,7 @@
 ---
 title: "Projects & publications"
 layout: single
+author_profile: true
 permalink: /projects/
 ---
 

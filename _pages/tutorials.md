@@ -1,6 +1,7 @@
 ---
 title: "Tutorials & teaching"
 layout: single
+author_profile: true
 permalink: /tutorials/
 ---
 
