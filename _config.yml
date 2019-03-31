@@ -93,49 +93,40 @@ analytics:
 
 # Site Author
 author:
-  name             : "Ruan van Mazijk"
-  avatar           : "assets/images/face2.jpg"
-  bio              : >
-    An ecology and evolutionary biology Masters student
-    at the Dept. of Biological Science, University of Cape Town
-  location         : "Cape Town, South Africa"
-  email            : "rvanmazijk@gmail.com"
+  name     : "Ruan van Mazijk"
+  avatar   : "assets/images/face2.jpg"
+  bio      : >
+             An ecology and evolutionary biology Masters student
+             at the Dept. of Biological Science, University of Cape Town
+  location : "Cape Town, South Africa"
+  email    : "rvanmazijk@gmail.com"
   links:
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/rvanmazijk"
+      icon : "fab fa-fw fa-twitter-square"
+      url  : "https://twitter.com/rvanmazijk"
     - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/rvanmazijk"
+      icon : "fab fa-fw fa-instagram"
+      url  : "https://instagram.com/rvanmazijk"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/rvanmazijk"
+      icon : "fab fa-fw fa-github"
+      url  : "https://github.com/rvanmazijk"
+    - label: "LinkedIn"
+      icon : "fab fa-fw fa-linkedin"
+      url  : "https://www.linkedin.com/in/ruan-van-mazijk-4a04b0127/"
     - label: "ResearchGate"
-      icon: "fab fa-fw fa-researchgate"
-      url: "https://www.researchgate.net/profile/Ruan_Van_Mazijk"
+      icon : "fab fa-fw fa-researchgate"
+      url  : "https://www.researchgate.net/profile/Ruan_Van_Mazijk"
+    - label: "Mendeley"
+      icon : "fab fa-fw fa-mendeley"
+      url  : "https://www.mendeley.com/profiles/ruan-van-mazijk/"
+    - label: "ORCID"
+      icon : "fab fa-fw fa-orcid"
+      url  : "https://orcid.org/0000-0003-2659-6909"
 
 
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
 
 
 # Reading Files
