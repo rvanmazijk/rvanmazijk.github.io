@@ -1,0 +1,46 @@
+genus,species,includes,new_name_rvm,clade_rvm,flowering_start,flowering_end
+Schoenus,Schoenus nigricans,,,S. nigricans,May,Oct
+Tetraria,Tetraria bolussi,,Schoenus bolussi,S. cuspidatus et al.,Jul,Aug
+Tetraria,Tetraria brachyphylla,,Schoenus arenicola,S. compar-S. pictus,Jul,Nov
+Tetraria,Tetraria bromoides,,,T. thermalis-T. bromoides,Oct,Feb
+Tetraria,Tetraria burmanii,,,T. microstachys-T. burmannii,Nov,Apr
+Tetraria,Tetraria capillacea,,,T. fasciata-T. flexuosa,Oct,Nov
+Tetraria,Tetraria compacta,,Schoenus compactus,S. cuspidatus et al.,Aug,Nov
+Tetraria,Tetraria compar,,Schoenus compar,S. compar-S. pictus,Apr,Jun
+Tetraria,Tetraria crassa,,Schoenus crassus,S. cuspidatus et al.,Apr,Jun
+Tetraria,Tetraria crinifolia,,,T. fasciata-T. flexuosa,Aug,Oct
+Tetraria,Tetraria cuspidata,,Schoenus cuspidatus,S. cuspidatus et al.,Aug,Nov
+Tetraria,Tetraria exilis,,Schoenus exilis,S. cuspidatus et al.,Apr,Jun
+Tetraria,Tetraria eximia,,,T. thermalis-T. bromoides,May,Aug
+Tetraria,Tetraria fasciata,Tetraria pleosticha,,T. fasciata-T. flexuosa,Nov,May
+Tetraria,Tetraria ferruginea,,,T. fasciata-T. flexuosa,Mar,Jul
+Tetraria,Tetraria fimbriolata,,,T. microstachys-T. burmannii,Jan,Apr
+Tetraria,Tetraria flexuosa,,,T. fasciata-T. flexuosa,Jan,May
+Tetraria,Tetraria fourcadei,,,T. fasciata-T. flexuosa,Jan,May
+Tetraria,Tetraria graminifolia,,Schoenus graminifolius,S. cuspidatus et al.,Jul,Nov
+Tetraria,Tetraria involucrata,,,T. thermalis-T. bromoides,Jan,Apr
+Tetraria,Tetraria ligulata,Tetraria autumnalis,"Schoenus ligulatus, Schoenus autumnalis",,Apr,Jun
+Tetraria,Tetraria maculata,,,T. fasciata-T. flexuosa,Dec,Feb
+Tetraria,Tetraria microstachys,,,T. microstachys-T. burmannii,Dec,Feb
+Tetraria,Tetraria nigrovaginata,,,T. microstachys-T. burmannii,Jan,Apr
+Tetraria,Tetraria paludosa,,Schoenus riparius,,Aug,Nov
+Tetraria,Tetraria picta,,Schoenus pictus,S. compar-S. pictus,Dec,May
+Tetraria,Tetraria pillansii,,,T. microstachys-T. burmannii,Jan,Feb
+Tetraria,Tetraria pubescens,,,T. microstachys-T. burmannii,Oct,Apr
+Tetraria,Tetraria pygmaea,,,T. microstachys-T. burmannii,Feb,Apr
+Tetraria,Tetraria robusta,Tetraria compressa,,T. thermalis-T. bromoides,Feb,Mar
+Tetraria,Tetraria secans,,,T. thermalis-T. bromoides,Apr,May
+Tetraria,Tetraria sylvatica,,Schoenus laticulmis,S. cuspidatus et al.,May,Dec
+Tetraria,Tetraria thermalis,,,T. thermalis-T. bromoides,Jun,Oct
+Tetraria,Tetraria triangularis,Tetraria macowaniana,,T. thermalis-T. bromoides,Feb,Apr
+Tetraria,Tetraria ustulata,,,T. fasciata-T. flexuosa,Jan,May
+Tetraria,Tetraria vaginata,,,T. microstachys-T. burmannii,Sep,Apr
+Tetraria,Tetraria variabilis,,Schoenus variabilis,S. cuspidatus et al.,Apr,June
+Epischoenus,Epischoenus adnatus,,Schoenus adnatus,Epischoenus spp.,Feb,Aug
+Epischoenus,Epischoenus cernuus,,Tetraria cernua,T. fasciata-T. flexuosa,Oct,Nov
+Epischoenus,Epischoenus complanatus,,Schoenus complanatus,Epischoenus spp.,Dec,Mar
+Epischoenus,Epischoenus dregeanus,,Schoenus dregeanus,Epischoenus spp.,Dec,Apr
+Epischoenus,Epischoenus gracilis,,Schoenus gracilimus,Epischoenus spp.,Dec,Mar
+Epischoenus,Epischoenus lucidus,,Schoenus lucidus,Epischoenus spp.,Dec,Dec
+Epischoenus,Epischoenus quadrangularis,,Schoenus quadrangularis,Epischoenus spp.,Nov,May
+Epischoenus,Epischoenus villosus,,Schoenus neovillosus,Epischoenus spp.,Jan,Feb

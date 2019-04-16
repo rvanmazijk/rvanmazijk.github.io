@@ -2,6 +2,8 @@
 title: "Wrapping my head around circular means"
 author: "Ruan van Mazijk"
 output: github_document
+fig_caption: true
+bibliography: "2019-03-25-circular-data.bib"
 ---
 
 ```{r setup, include=FALSE}
@@ -18,16 +20,17 @@ Normally in ecology and related disciplines, when we wish to compare two or more
 
 This is not the case with phenological or seasonal data.
 
-# A small introduction to circular data
+## A small introduction to circular data
 
-A variable describing the time of year, time of day or season of an event is an example of _circular data_. A simple example of could involve one trying to estimate when, on average, people sleep.
+A variable describing the time of year, time of day or season of an event is an example of _circular data_. A simple example of could involve one trying to estimate when, on average, people sleep:
 
-
-```{r sleep-example-1}
+```{r sleep-example-plot-linear, fig.cap="Histogram of sleeping times."}
+# Make up some data
 sleeping <- c(
   24, 23, 24, 23, 22, 24, 23, 21, 22, 24, 23, 20, 22, 23, 24, 24,
-  1, 2, 2, 1, 3, 2, 2, 2, 2, 3, 4, 4, 3, 3, 4, 5, 5, 6, 3, 2, 1
+  1, 2, 2, 1, 3, 2, 2, 1, 1, 3, 4, 2, 3, 3, 4, 5, 5, 6, 3, 1, 1
 )
+# Plot its distribution
 hist(sleeping,
   breaks = 24,
   xlab = "Time of day (hour)", ylab = "No. people sleeping",
@@ -35,10 +38,274 @@ hist(sleeping,
 )
 ```
 
-From this made-up data it is clear that people sleep at night. But our go-to statistic, the mean, fails at describing this.
+From this made-up data it is clear that people sleep at night. But our go-to statistic, the mean, fails at describing this:
 
-```{r sleep-example-2}
+```{r sleep-example-mean}
 mean(sleeping)
 ```
 
-Nobody was asleep at 11h30 in the afternoon! How do can we
+Nobody was asleep at 11h30 in the afternoon! This statistic is not very helpful. How can we better describe the average time of asleepness?
+
+Part of this issue is that time-of-day is not a _linear_ measurement, but a _circular_ one. It does not fall on a number line, as 24h00 is the same "thing" as 00h00. Our sleeping data would be better visualised as follows (using the R-package [`ggplot2`](https://ggplot2.tidyverse.org/)) [@ggplot2]:
+
+```{r sleep-example-plot-circular, fig.cap="Circular histogram of sleeping times."}
+library(ggplot2)
+# Set theme to something simpler, cleaner
+theme_set(theme_minimal())
+ggplot(as.data.frame(sleeping), aes(sleeping)) +
+  geom_histogram(bins = 24) +  # because 24hrs in a day
+  scale_x_continuous(
+    breaks = seq(0, 24, 2), 
+    labels = paste0(seq(0, 24, 2), "h00")  # 01h00, 02h00 etc.
+  ) +
+  # Make the plot circular
+  coord_polar() +
+  theme(
+    axis.title.x = element_blank(),
+    # Remove non-sensical y-axis details now that plot is circular
+    axis.title.y = element_blank(),
+    axis.text.y = element_blank()
+  )
+```
+
+Here, it is much clearer that people tend to be asleep around 00h00 to 01h00. The R-package [`circular`](https://cran.r-project.org/web/packages/circular/index.html) [@circular] provides an interface to this common form of data in the social sciences and ecology. It enables us to calculate statistics such as the _circular mean_, which accounts for the fact that our data live on a circle and not a number line.
+
+To convert data into explicitly circular data, we use `circular::as.circular()`, which takes a vector as input:
+
+```{r sleep-example-circular-pkg, fig.cap="The default plot produced by the `plot.circular()` method."}
+library(circular)
+sleeping <- as.circular(sleeping, 
+  type = "directions",
+  units = "hours", template = "clock24"
+)
+sleeping
+plot(sleeping)
+```
+
+Now, the mean makes much more sense:
+
+```{r sleep-example-circular-mean, fig.cap="The mean is now more sensible, thanks to `circular::`."}
+mean(sleeping)
+plot(sleeping)
+points(mean(sleeping), col = "red")
+```
+
+## My data: flowering times in Cape sedges
+
+I mentioned at the top that my motivation for this post was to share the application of circular statistics to some data for my Masters (albeit a small example thereof).
+
+As above, I am comparing flowering data between six clades of gramminoid fynbos plants (Cyperaceae, Tribe Schoeneae), namely the genera _Schoenus_ L. and _Tetraria_ Beauv. _Tetraria_ is known to be polyphyletic, and until recently the only _Schoenus_ species in southern Africa was the cosmopolitain _S. nigricans_ L. The rest, used below, have been transferred from _Tetraria_ Beauv. to _Schoenus_ L. by @elliott2018.
+
+The last large-scale conspectus of the Cape flora was by @manning2012. The data I use here are from that flora, with species names ammended to much current taxonomy [as in @elliott2018].
+
+```{r setup-flowering-data, include=FALSE}
+library(here)
+library(tidyverse)
+flowering_times <- 
+  read_csv(here("assets/data",
+    "CFR-Schoeneae-flowering-times_from-Manning-and-Goldblatt-2012_rvm.csv"
+  )) %>%
+  mutate(species = ifelse(is.na(new_name_rvm), species, new_name_rvm)) %>%
+  rename(clade = clade_rvm) %>%
+  select(clade, species, flowering_start, flowering_end) %>%
+  arrange(clade) %>%
+  filter(!is.na(clade))
+```
+
+```{r print-flowering-data, echo=FALSE}
+flowering_times %>%
+  select(-clade) %>%
+  knitr::kable(
+    col.names = c("Species", "Start", "End"),
+    caption = paste(
+      "Flowering times (start and end) for _Schoenus_ L. and _Tetraria_ Beauv.",
+      "(Cyperaceae, Tribe Schoeneae), from @manning2012."
+    )
+  )
+```
+
+Along with these data, taxonomic research groups these species into three clades in each genus (_Schoenus_ and _Tetraria_). That merely explain the colour-coding used in the figures below.
+
+For now, let's unpack how to take `"Jan"`, `"Feb"`, `"Mar"` and turn it into meaningful numerical data, and treat that data circularly such that December and January are adjecent.
+
+I will be using the [`tidyverse`]()-suite of packages for wrangling these data. Briefly, if you are unfamiliar, the logic of `tidy`-functions is:
+
+```{r tidy-example, eval=FALSE}
+data %>%
+  verb1() %>%
+  verb2() %>%
+  verb3()
+```
+
+where `%>%` (the forward pipe) passes the results before the pipe to the function ahead of the pipe, so that instead of `f(g(h(x)))` (nesting gets confusing), we use `x %>% f() %>% g() %>% h()`, as in the above example with `data` and `verb*()`.
+
+### Flowering months as numerical data
+
+First, we need to convert the monthly abbreviations into numbers. Simple enough: `"Jan"` = 1, `"Feb"` = 2, etc. I apply this process for each rows' `flowering_start` and `flowering_end` values, row-by-row, using [`purrr`]()--a functional programming package for R.
+
+```{r get-month-int}
+get_month_int <- function(month_abb) {
+  # Converts "Jan", "Feb", etc. -> 1, 2, etc.
+  map_int(month_abb, ~ifelse(.x %in% month.abb,
+    which(month.abb == .x),
+    NA
+  ))
+}
+# Apply get_month_int() to the data
+flowering_times <- flowering_times %>%
+  mutate(
+    flowering_start = get_month_int(flowering_start),
+    flowering_end   = get_month_int(flowering_end)
+  )
+flowering_times
+```
+
+Now, let's create sequences of months that a species is in flower for, starting at `flowering_start`, ending at `flowering_end`. This will be embedded within the dataframe as a [_list-column_]()--where each entry in the column is itself a list, nested in the dataframe. I apply this process for each pair of `flowering_start`-`flowering_end` values, again, using [`purrr`]()--a functional programming package for R.
+
+```{r get-month-seq}
+get_month_seq <- function(start, end) {
+  # Creates seq from start to end, unless end < start
+  map2(start, end, function(.start, .end) {
+    if (any(is.na(c(.start, .end)))) {
+      return(NA)
+    } else if (.start > .end) {
+      return(c(.start:12, 1:.end))  # e.g. Dec->Apr = 12, 1, 2, 3, 4
+    } else if (.start <= .end) {
+      return(.start:.end)
+    }
+  })
+}
+flowering_times <- flowering_times %>%
+  mutate(flowering_months = get_month_seq(flowering_start, flowering_end))
+flowering_times
+```
+
+Lastly, we just need to reshape this data into a form `ggplot2` can understand: long-form data.
+
+```{r reshape-flowering-data}
+flowering_times <- flowering_times %>%
+  unnest() %>% # unnest the list-columns so ggplot can understand
+  # Arrange species by sub-generic clade
+  arrange(clade) %>%
+  mutate(species = factor(species, levels = unique(species)))
+flowering_times
+```
+
+### Plotting flowering times
+
+Now we can really plot this data:
+
+```{r plot-flowering-times-linear}
+flowering_plot <- 
+  ggplot(flowering_times, aes(flowering_months, species, fill = clade)) +
+    geom_tile() +
+    scale_x_continuous(breaks = 1:12, labels = month.abb) +
+    theme(
+      axis.title.x = element_blank(),  # no need for x-axis title
+      axis.text.y  = element_text(hjust = 0)  # left-justify species names
+    )
+flowering_plot
+```
+
+It's clear that all the (austral) summer flowering species (`"Dec"`--`"Feb"`) could really benefit from a circular plot. Thus:
+
+```{r plot-flowering-times-circular}
+flowering_plot +
+  # Make the plot circular
+  coord_polar() +
+  # Remove non-sensical y-axis details now that plot is circular
+  theme(
+    axis.text.y  = element_blank(),
+    axis.title.y = element_blank()
+  )
+```
+
+This is much more realistic. Problem is, it squashes up all the species in the centre of the circle.
+
+Perhaps a better summary would be a count of the number of species in flower in a given month, for each clade. Like so:
+
+```{r plot-flowering-times-circular-bars}
+flowering_times %>%
+  filter(clade != "S. nigricans") %>%  # only 1 species, remove for this plot
+  ggplot(aes(flowering_months, fill = clade)) +
+    geom_bar() +
+    scale_x_continuous(breaks = 1:12, labels = month.abb) +
+    coord_polar() +
+    facet_wrap(~clade) +
+    theme(
+      axis.title.x    = element_blank(),
+      axis.text.y     = element_blank(),
+      axis.title.y    = element_blank(),
+      strip.text      = element_blank()  # legend duplicates facet labels
+    )
+```
+
+Now that we've figured out how to plot the data in some useful ways, let's now try and analyses with the appropriate statistics.
+
+### Statistics for flowering times
+
+First, let's just simply our dataset for the purposes of this exercise. I'm going to just group months where _any_ species is in flower, grouped by clade:
+
+```{r summarise-flowering-data}
+flowering_summary <- flowering_times %>%
+  select(clade, flowering_months) %>%
+  # Split the dataframe into a list according to clade
+  split(.$clade) %>%
+  # For each item in the list, return only the vector of flowering months
+  map(pull, flowering_months) %>%
+  # Tidy up the list's names
+  set_names(names(.) %>%
+    # Replace hyphens ("-") & spaces (" ") with underscores ("_")
+    str_replace_all("[-\ ]", "_") %>%
+    # Remove fullstops (".")
+    str_remove_all("\\.")
+  )
+flowering_summary
+```
+
+Now let's `circular::`-ise the data:
+
+<!--FIXME: from here down-->
+
+```{r circularise-flowering-data}
+flowering_circular <- flowering_summary %>%
+  map(function(.x) .x * 2) %>% 
+  map(as.circular,
+    type = "directions",
+    units = "hours", template = "clock24",
+    rotation = "clock"
+  )
+flowering_circular
+```
+
+Let's plot that with `plot.circular()` just to check that it worked:
+
+```{r plot-circularised-flowering-data}
+# For each item in the list (.x) and its name (.y):
+imap(flowering_circular, ~plot(.x, main = .y))
+```
+
+Note, where this is more than one data point (i.e. species), the points on this plots overlap.
+
+Let's try plotting the means now:
+
+```{r plot-circularised-flowering-data-w-means}
+# What are the means?
+map(flowering_circular, mean, na.rm = TRUE)
+imap(flowering_circular, function(.x, .y) {
+  plot(.x, main = .y)
+  points(mean(.x, na.rm = TRUE), col = "red")
+})
+```
+
+## Session info
+
+I present here my machine's state at time of writing, for reproducibility's sake.
+
+```{r sessionInfo}
+sessionInfo()
+```
+
+## Further reading
+
+## References
