@@ -35,16 +35,13 @@ I am also the Student Representative on the Southern African Association of Syst
 
 ## Interests
 
-My core interests are in comparative biology, macroecology, macroevolution, 
-phylogenetic systematics, biogeography, plant ecophysiology and evolutionary biology in general.
+My core interests are in comparative biology, macroecology, macroevolution, phylogenetic systematics, biogeography, plant ecophysiology and evolutionary biology in general.
 
-I am most interested and work most with plants (hence the title of this 
-website), but I do have a strong interest in animal ecology and evolution as 
-well. I'd describe myself as being genuinely fascinated by almost any taxa, from ferns, mosses, magnolias and daisies to cetaceans, artiodactyls, spiders and gastropods.
+I am most interested and work most with plants (hence the title of this website), but I do have a strong interest in animal ecology and evolution as well. I'd describe myself as being genuinely fascinated by almost any taxa, from ferns, mosses, magnolias and daisies to cetaceans, artiodactyls, spiders and gastropods.
 
 My current "pet taxa" include, but are not limited to:
 
-- _Tetraria_ (Cyperaceae, trib Schoeneae), a genus of morphologically diverse sedges rich in the Cape flora. This is one of the major clades concerned in my Masters work.
+- _Tetraria_ (Cyperaceae, tribe Schoeneae), a genus of morphologically diverse sedges rich in the Cape flora. This is one of the major clades concerned in my Masters work.
 - _Trifolium_ (Fabaceae)---the clovers. I just think they're neat.
 - Grasses (Poaceae) in general (due to my being one of [Tony Verboom's](http://www.biologicalsciences.uct.ac.za/bio/staff/academic/verboom) students)
 - Aroids (Araceae), like _Monstera deliciosa_ and _Philodendron_ spp. One can't help but develop an interest in these after a while when you have many as house plants.
