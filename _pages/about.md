@@ -4,16 +4,20 @@ author_profile: true
 permalink: /about/
 ---
 
+I am a Masters student in the [Department of Biological Sciences](http://www.biologicalsciences.uct.ac.za/) at the [University of Cape Town (UCT)](http://www.uct.ac.za/), working on the ecology and evolutionary biology of the [Cape flora](https://en.wikipedia.org/wiki/Cape_Floristic_Region), the world's smallest floristic kingdom and a centre of a plant biodiversity.
+
 <!--
   <img src="/assets/images/logos/UCT.png" align="right" width="60" />
   <img src="/assets/images/logos/BIO.png" align="right" width="60" />
 -->
 
-I am a Masters student in the [Department of Biological Sciences](http://www.biologicalsciences.uct.ac.za/) at the [University of Cape Town (UCT)](http://www.uct.ac.za/), working on the ecology and evolutionary biology of the [Cape flora](https://en.wikipedia.org/wiki/Cape_Floristic_Region), the world's smallest floristic kingdom and a centre of a plant biodiversity.
-
 I am also the Student Representative on the Southern African Association of Systematic Biology (SASSB), where I am working to create a more inter-connected and active community of young systematists and evolutionary biologists in southern Africa. _More details on this to come!_
 
 <!-- <img src="/assets/images/logos/SASSB.png" align="right" width="60" /> -->
+
+You can find a one page version of my CV as a PDF [here](/cv/RvanMazijk_CV_1p.pdf) and my full CV [here](/cv/RvanMazijk_CV_full.pdf).
+
+<!-- Photos of me -->
 
 <figure class="half">
   <img src="/assets/images/me-w-P-cynaroides.jpg" />
@@ -33,11 +37,16 @@ phylogenetic systematics, biogeography, plant ecophysiology and evolutionary bio
 
 I am most interested and work most with plants (hence the title of this 
 website), but I do have a strong interest in animal ecology and evolution as 
-well.
+well. I'd describe myself as being genuinely fascinated by almost any taxa, from ferns, mosses, magnolias and daisies to cetaceans, artiodactyls, spiders and gastropods.
 
-<!-- My -->
+My current "pet taxa" include, but are not limited to:
 
-You can find a one page version of my CV as a PDF [here](/cv/RvanMazijk_CV_1p.pdf) and my full CV [here](/cv/RvanMazijk_CV_full.pdf).
+- _Tetraria_ (Cyperaceae, trib Schoeneae), a genus of morphologically diverse sedges rich in the Cape flora. This is one of the major clades concerned in my Masters work.
+- _Trifolium_ (Fabaceae)---the clovers. I just think they're neat.
+- Grasses (Poaceae) in general (due to my being one of [Tony Verboom's](http://www.biologicalsciences.uct.ac.za/bio/staff/academic/verboom) students)
+- Aroids (Araceae), like _Monstera deliciosa_ and _Philodendron_ spp. One can't help but develop an interest in these after a while when you have many as house plants.
+
+I also have a passion for the statistical programming language [R](https://www.r-project.org/) and more broadly computational methods in ecology and evolutionary studies. I have a keen interest in applying data science and big data approaches to my work. You can find my programming work on <a href="https://github.com/rvanmazijk" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a>.
 
 ## Contact
 
