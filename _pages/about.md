@@ -4,8 +4,8 @@ author_profile: true
 permalink: /about/
 ---
 
+<br>
 <img src="/assets/images/logos/UCT.png" align="right" width="60" />
-
 <img src="/assets/images/logos/BIO.png" align="right" width="60" />
 
 I am a Masters student in the 
@@ -18,9 +18,10 @@ Africa. I am most fascinated by phylogenetic systematics, plant ecophysiology,
 phylogenetic ecology and evolutionary biology in general.
 
 
-I am also the Student Representative on the Southern African Association of Systematic Biology (SASSB), where I am working to create a more inter-connected and active community of young systematists and evolutionary biologists in southern Africa.
-
-_More details on this to come!_
+I am also the Student Representative on the Southern African Association of 
+Systematic Biology (SASSB), where I am working to create a more inter-connected 
+and active community of young systematists and evolutionary biologists in 
+southern Africa---_more details on this to come!_
 
 <!-- <img src="/assets/images/logos/SASSB.png" align="right" width="60" /> -->
 
@@ -28,19 +29,17 @@ You can find a one page version of my CV as a PDF [here](/cv/RvanMazijk_CV_1p.pd
 
 ## Contact
 
-Email: <ruanvmazijk@gmail.com>
-
-Mobile: (+27) 72 516 7570
-
-Office: (+27) 21 650 3684
+Email: <ruanvmazijk@gmail.com> <br>
+Mobile: (+27) 72 516 7570 <br>
+Office: (+27) 21 650 3684 <br>
 
 Postal:
 
-Department of Biological Sciences \
-Private Bag X3 \
-Rondebosch \
-7701 \
-Cape Town \
+Department of Biological Sciences <br>
+Private Bag X3 <br>
+Rondebosch <br>
+7701 <br>
+Cape Town <br>
 South Africa
 
 <!--
