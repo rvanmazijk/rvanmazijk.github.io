@@ -15,19 +15,15 @@ I am also the Student Representative on the Southern African Association of Syst
 
 <!-- <img src="/assets/images/logos/SASSB.png" align="right" width="60" /> -->
 
+<figure class="half">
+  <img src="/assets/images/me-w-P-cynaroides.jpg" />
+  <img src="/assets/images/me-w-T-thermalis.jpg" />
+  <figcaption>Left: Me with <i>Protea cynaroides</i>, South Africa's national flower, and a striking example of typical <i>Protea</i> inflorescence morphology (Fernkloof Nature Reserve, South Africa, 2018). Right: Height comparison of me (ca. 190 cm) and <i>Tetraria thermalis</i> culm and inflorescence (Houwhoek area, Kogelberg Nature Reserve, South Africa, 2018). <i>T. thermalis</i> is one of my study species for my Masters.</figcaption>
+</figure>
+
 <figure>
-  <img src="/assets/images/JM_UCT-WaterSA-Student-Ruan-van-Mazijk-4.jpg" width="200" />
+  <img src="/assets/images/JM_UCT-WaterSA-Student-Ruan-van-Mazijk-4.jpg" />
   <figcaption>© 2018 <a href="https://www.linkedin.com/in/je-nine-may-4619a119/">Je'nine May</a>.</figcaption>
-</figure>
-
-<figure>
-  <img src="/assets/images/me-w-P-cynaroides.jpg" width="200" />
-  <figcaption>Me with <i>Protea cynaroides</i>, South Africa's national flower, and a striking example of typical <i>Protea</i> inflorescence morphology. Fernkloof Nature Reserve, South Africa, 2018.</figcaption>
-</figure>
-
-<figure>
-  <img src="/assets/images/me-w-T-thermalis.jpg" width="200" />
-  <figcaption>Height comparison of me (ca. 190 cm) and <i>Tetraria thermalis</i> culm and inflorescence. <i>T. thermalis</i> is one of my study species for my Masters.</figcaption>
 </figure>
 
 ## Interests
