@@ -4,21 +4,17 @@ author_profile: true
 permalink: /about/
 ---
 
-<p>
-  <br>
+<!--
   <img src="/assets/images/logos/UCT.png" align="right" width="60" />
   <img src="/assets/images/logos/BIO.png" align="right" width="60" />
-</p>
+-->
 
 I am a Masters student in the 
 [Department of Biological Sciences](http://www.biologicalsciences.uct.ac.za/) 
-at the [University of Cape Town (UCT)](http://www.uct.ac.za/), where I happily 
-work on all things ecology and evolutionary biology, particularly in plants. I 
-am lucky to work in the centre of a floristically megadiverse part of the 
-world, the Cape Floristic Region (CFR), in the southwestern Cape of South 
-Africa. I am most fascinated by phylogenetic systematics, plant ecophysiology, 
-phylogenetic ecology and evolutionary biology in general.
-
+at the [University of Cape Town (UCT)](http://www.uct.ac.za/), working on the 
+ecology and evolutionary biology of the 
+[Cape flora](https://en.wikipedia.org/wiki/Cape_Floristic_Region), the world's 
+smallest floristic kingdom and a centre of a plant biodiversity.
 
 I am also the Student Representative on the Southern African Association of 
 Systematic Biology (SASSB), where I am working to create a more inter-connected 
@@ -27,20 +23,39 @@ southern Africa---_more details on this to come!_
 
 <!-- <img src="/assets/images/logos/SASSB.png" align="right" width="60" /> -->
 
+![© 2018 [Je'nine May](https://www.linkedin.com/in/je-nine-may-4619a119/).)(/assets/images/JM_UCT-WaterSA-Student-Ruan Mazijk-4.jpg)
+![Me with _Protea cynaroides_, Fernkloof Nature Reserve, South Africa, 2018](/assets/images/me-w-P-cynaroides.jpg)
+![Height comparison of me (ca. 190 cm) and _Tetraria thermalis_ culm and inflorescence. _T. thermalis_ is one of my study species for my Masters.](/assets/images/me-w-T-thermalis.jpg)
+
+## Interests
+
+My core interests are in comparative biology, macroecology, macroevolution, 
+phylogenetic systematics, biogeography, plant ecophysiology and evolutionary biology in general.
+
+
+
+I am most interested and work most with plants (hence the title of this 
+website), but I do have a strong interest in animal ecology and evolution as 
+well.
+
+My
+
 You can find a one page version of my CV as a PDF [here](/cv/RvanMazijk_CV_1p.pdf) and my full CV [here](/cv/RvanMazijk_CV_full.pdf).
 
 ## Contact
 
-- Email: <ruanvmazijk@gmail.com>
-- Mobile: (+27) 72 516 7570
-- Office: (+27) 21 650 3684
-- Postal: <br>
-  Department of Biological Sciences <br>
-  Private Bag X3 <br>
-  Rondebosch <br>
-  7701 <br>
-  Cape Town <br>
-  South Africa
+Email: <ruanvmazijk@gmail.com> <br>
+Mobile: (+27) 72 516 7570 <br>
+Office: (+27) 21 650 3684 <br>
+
+Postal:
+
+Department of Biological Sciences <br>
+Private Bag X3 <br>
+Rondebosch <br>
+7701 <br>
+Cape Town <br>
+South Africa
 
 <!--
   - label: "Twitter"
