@@ -23,9 +23,14 @@ southern Africa---_more details on this to come!_
 
 <!-- <img src="/assets/images/logos/SASSB.png" align="right" width="60" /> -->
 
-![© 2018 [Je'nine May](https://www.linkedin.com/in/je-nine-may-4619a119/).)(/assets/images/JM_UCT-WaterSA-Student-Ruan Mazijk-4.jpg)
-![Me with _Protea cynaroides_, Fernkloof Nature Reserve, South Africa, 2018](/assets/images/me-w-P-cynaroides.jpg)
-![Height comparison of me (ca. 190 cm) and _Tetraria thermalis_ culm and inflorescence. _T. thermalis_ is one of my study species for my Masters.](/assets/images/me-w-T-thermalis.jpg)
+![](/assets/images/JM_UCT-WaterSA-Student-Ruan-van-Mazijk-4.jpg)
+© 2018 [Je'nine May](https://www.linkedin.com/in/je-nine-may-4619a119/).
+
+![](/assets/images/me-w-P-cynaroides.jpg)
+Me with _Protea cynaroides_, South Africa's national flower, and a striking example of typical _Protea_ inflorescence morphology. Fernkloof Nature Reserve, South Africa, 2018.
+
+![](/assets/images/me-w-T-thermalis.jpg){ height=100px }
+Height comparison of me (ca. 190 cm) and _Tetraria thermalis_ culm and inflorescence. _T. thermalis_ is one of my study species for my Masters.
 
 ## Interests
 
@@ -47,8 +52,6 @@ You can find a one page version of my CV as a PDF [here](/cv/RvanMazijk_CV_1p.pd
 Email: <ruanvmazijk@gmail.com> <br>
 Mobile: (+27) 72 516 7570 <br>
 Office: (+27) 21 650 3684 <br>
-
-Postal:
 
 Department of Biological Sciences <br>
 Private Bag X3 <br>
