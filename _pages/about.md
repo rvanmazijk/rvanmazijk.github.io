@@ -6,6 +6,8 @@ permalink: /about/
 
 I am a Masters student in the [Department of Biological Sciences](http://www.biologicalsciences.uct.ac.za/) at the [University of Cape Town](http://www.uct.ac.za/) (UCT), working on the ecology and evolutionary biology of the [Cape flora](https://en.wikipedia.org/wiki/Cape_Floristic_Region), the world's smallest floristic kingdom and a centre of a plant biodiversity.
 
+Read more about my Masters [here](/projects/#MSc).
+
 <!--
   <img src="/assets/images/logos/UCT.png" align="right" width="60" />
   <img src="/assets/images/logos/BIO.png" align="right" width="60" />
@@ -28,7 +30,7 @@ I am also the Student Representative on the Southern African Association of Syst
 
 <figure>
   <img src="/assets/images/JM_UCT-WaterSA-Student-Ruan-van-Mazijk-4.jpg" />
-  <figcaption>© 2018 <a href="https://www.linkedin.com/in/je-nine-may-4619a119/">Je'nine May</a>.</figcaption>
+  <figcaption>Posing beside the Liesbeek River, Cape Town, following my (first ever) <a href="/projects/#isopaper">paper</a> on isotopic tracing of its stormwater during a winter rainstorm. Read the press release <a href="https://www.news.uct.ac.za/article/-2018-11-26-harvesting-storm-water-from-the-liesbeek-river">here</a>! (Photo © 2018 <a href="https://www.linkedin.com/in/je-nine-may-4619a119/">Je'nine May)</a>.</figcaption>
 </figure>
 
 ## Interests
