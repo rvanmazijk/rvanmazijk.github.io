@@ -30,7 +30,7 @@ I am also the Student Representative on the Southern African Association of Syst
 
 <figure>
   <img src="/assets/images/JM_UCT-WaterSA-Student-Ruan-van-Mazijk-4.jpg" />
-  <figcaption>Posing beside the Liesbeek River, Cape Town, following my (first ever) <a href="/projects/#isopaper">paper</a> on isotopic tracing of its stormwater during a winter rainstorm. Read the press release <a href="https://www.news.uct.ac.za/article/-2018-11-26-harvesting-storm-water-from-the-liesbeek-river">here</a>! (Photo © 2018 <a href="https://www.linkedin.com/in/je-nine-may-4619a119/">Je'nine May)</a>.</figcaption>
+  <figcaption>Posing beside the Liesbeek River, Cape Town, following my (first ever) <a href="http://dx.doi.org/10.4314/wsa.v44i4.16">paper</a> on isotopic tracing of its stormwater during a winter rainstorm. Read the press release <a href="https://www.news.uct.ac.za/article/-2018-11-26-harvesting-storm-water-from-the-liesbeek-river">here</a>! Find out more <a href="/projects/#isopaper">here</a>. (Photo © 2018 <a href="https://www.linkedin.com/in/je-nine-may-4619a119/">Je'nine May</a>.)</figcaption>
 </figure>
 
 ## Interests
