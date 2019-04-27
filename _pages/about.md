@@ -9,41 +9,37 @@ permalink: /about/
   <img src="/assets/images/logos/BIO.png" align="right" width="60" />
 -->
 
-I am a Masters student in the 
-[Department of Biological Sciences](http://www.biologicalsciences.uct.ac.za/) 
-at the [University of Cape Town (UCT)](http://www.uct.ac.za/), working on the 
-ecology and evolutionary biology of the 
-[Cape flora](https://en.wikipedia.org/wiki/Cape_Floristic_Region), the world's 
-smallest floristic kingdom and a centre of a plant biodiversity.
+I am a Masters student in the [Department of Biological Sciences](http://www.biologicalsciences.uct.ac.za/) at the [University of Cape Town (UCT)](http://www.uct.ac.za/), working on the ecology and evolutionary biology of the [Cape flora](https://en.wikipedia.org/wiki/Cape_Floristic_Region), the world's smallest floristic kingdom and a centre of a plant biodiversity.
 
-I am also the Student Representative on the Southern African Association of 
-Systematic Biology (SASSB), where I am working to create a more inter-connected 
-and active community of young systematists and evolutionary biologists in 
-southern Africa---_more details on this to come!_
+I am also the Student Representative on the Southern African Association of Systematic Biology (SASSB), where I am working to create a more inter-connected and active community of young systematists and evolutionary biologists in southern Africa---_more details on this to come!_
 
 <!-- <img src="/assets/images/logos/SASSB.png" align="right" width="60" /> -->
 
-![](/assets/images/JM_UCT-WaterSA-Student-Ruan-van-Mazijk-4.jpg)
-© 2018 [Je'nine May](https://www.linkedin.com/in/je-nine-may-4619a119/).
+<figure>
+  <img src="assets/images/JM_UCT-WaterSA-Student-Ruan-van-Mazijk-4.jpg" />
+  <figcaption>© 2018 <a href="https://www.linkedin.com/in/je-nine-may-4619a119/">Je'nine May</a>.</figcaption>
+</figure>
 
-![](/assets/images/me-w-P-cynaroides.jpg)
-Me with _Protea cynaroides_, South Africa's national flower, and a striking example of typical _Protea_ inflorescence morphology. Fernkloof Nature Reserve, South Africa, 2018.
+<figure>
+  <img src="/assets/images/me-w-P-cynaroides.jpg" />
+  <figcaption>Me with _Protea cynaroides_, South Africa's national flower, and a striking example of typical _Protea_ inflorescence morphology. Fernkloof Nature Reserve, South Africa, 2018.</figcaption>
+</figure>
 
-![](/assets/images/me-w-T-thermalis.jpg){ height=100px }
-Height comparison of me (ca. 190 cm) and _Tetraria thermalis_ culm and inflorescence. _T. thermalis_ is one of my study species for my Masters.
+<figure>
+  <img src="assets/images/me-w-T-thermalis.jpg" />
+  <figcaption>Height comparison of me (ca. 190 cm) and _Tetraria thermalis_ culm and inflorescence. _T. thermalis_ is one of my study species for my Masters.</figcaption>
+</figure>
 
 ## Interests
 
 My core interests are in comparative biology, macroecology, macroevolution, 
 phylogenetic systematics, biogeography, plant ecophysiology and evolutionary biology in general.
 
-
-
 I am most interested and work most with plants (hence the title of this 
 website), but I do have a strong interest in animal ecology and evolution as 
 well.
 
-My
+<!-- My -->
 
 You can find a one page version of my CV as a PDF [here](/cv/RvanMazijk_CV_1p.pdf) and my full CV [here](/cv/RvanMazijk_CV_full.pdf).
 
