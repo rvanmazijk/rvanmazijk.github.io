@@ -16,18 +16,18 @@ I am also the Student Representative on the Southern African Association of Syst
 <!-- <img src="/assets/images/logos/SASSB.png" align="right" width="60" /> -->
 
 <figure>
-  <img src="/assets/images/JM_UCT-WaterSA-Student-Ruan-van-Mazijk-4.jpg" />
+  <img src="/assets/images/JM_UCT-WaterSA-Student-Ruan-van-Mazijk-4.jpg" height="100" />
   <figcaption>© 2018 <a href="https://www.linkedin.com/in/je-nine-may-4619a119/">Je'nine May</a>.</figcaption>
 </figure>
 
 <figure>
-  <img src="/assets/images/me-w-P-cynaroides.jpg" />
+  <img src="/assets/images/me-w-P-cynaroides.jpg" height="100" />
   <figcaption>Me with <i>Protea cynaroides</i>, South Africa's national flower, and a striking example of typical <i>Protea</i> inflorescence morphology. Fernkloof Nature Reserve, South Africa, 2018.</figcaption>
 </figure>
 
 <figure>
-  <img src="/assets/images/me-w-T-thermalis.jpg" />
-  <figcaption>Height comparison of me (ca. 190 cm) and <i>Tetraria thermalis</i> culm and inflorescence. <i>T. thermalis_</i> is one of my study species for my Masters.</figcaption>
+  <img src="/assets/images/me-w-T-thermalis.jpg" height="100" />
+  <figcaption>Height comparison of me (ca. 190 cm) and <i>Tetraria thermalis</i> culm and inflorescence. <i>T. thermalis</i> is one of my study species for my Masters.</figcaption>
 </figure>
 
 ## Interests
