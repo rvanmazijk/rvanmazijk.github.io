@@ -45,7 +45,7 @@ You can find a one page version of my CV as a PDF [here](/cv/RvanMazijk_CV_1p.pd
 
 ## Contact
 
-Email: <ruanvmazijk@gmail.com> | Mobile: (+27) 72 516 7570 | Office: (+27) 21 650 3684
+<ruanvmazijk@gmail.com>
 
 Department of Biological Sciences <br>
 Private Bag X3 <br>
