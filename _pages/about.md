@@ -4,7 +4,7 @@ author_profile: true
 permalink: /about/
 ---
 
-I am a Masters student in the [Department of Biological Sciences](http://www.biologicalsciences.uct.ac.za/) at the [University of Cape Town (UCT)](http://www.uct.ac.za/), working on the ecology and evolutionary biology of the [Cape flora](https://en.wikipedia.org/wiki/Cape_Floristic_Region), the world's smallest floristic kingdom and a centre of a plant biodiversity.
+I am a Masters student in the [Department of Biological Sciences](http://www.biologicalsciences.uct.ac.za/) at the [University of Cape Town](http://www.uct.ac.za/) (UCT), working on the ecology and evolutionary biology of the [Cape flora](https://en.wikipedia.org/wiki/Cape_Floristic_Region), the world's smallest floristic kingdom and a centre of a plant biodiversity.
 
 <!--
   <img src="/assets/images/logos/UCT.png" align="right" width="60" />
@@ -15,7 +15,8 @@ I am also the Student Representative on the Southern African Association of Syst
 
 <!-- <img src="/assets/images/logos/SASSB.png" align="right" width="60" /> -->
 
-You can find a one page version of my CV as a PDF [here](/cv/RvanMazijk_CV_1p.pdf) and my full CV [here](/cv/RvanMazijk_CV_full.pdf).
+[One page CV](/cv/RvanMazijk_CV_1p.pdf) <br>
+[Full CV](/cv/RvanMazijk_CV_full.pdf)
 
 <!-- Photos of me -->
 
