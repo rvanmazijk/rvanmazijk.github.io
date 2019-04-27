@@ -31,18 +31,16 @@ You can find a one page version of my CV as a PDF [here](/cv/RvanMazijk_CV_1p.pd
 
 ## Contact
 
-Email: <ruanvmazijk@gmail.com> <br>
-Mobile: (+27) 72 516 7570 <br>
-Office: (+27) 21 650 3684 <br>
-
-Postal:
-
-Department of Biological Sciences <br>
-Private Bag X3 <br>
-Rondebosch <br>
-7701 <br>
-Cape Town <br>
-South Africa
+- Email: <ruanvmazijk@gmail.com>
+- Mobile: (+27) 72 516 7570
+- Office: (+27) 21 650 3684
+- Postal: <br>
+  Department of Biological Sciences <br>
+  Private Bag X3 <br>
+  Rondebosch <br>
+  7701 <br>
+  Cape Town <br>
+  South Africa
 
 <!--
   - label: "Twitter"
