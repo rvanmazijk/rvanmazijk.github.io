@@ -4,9 +4,11 @@ author_profile: true
 permalink: /about/
 ---
 
-<br>
-<img src="/assets/images/logos/UCT.png" align="right" width="60" />
-<img src="/assets/images/logos/BIO.png" align="right" width="60" />
+<p>
+  <br>
+  <img src="/assets/images/logos/UCT.png" align="right" width="60" />
+  <img src="/assets/images/logos/BIO.png" align="right" width="60" />
+</p>
 
 I am a Masters student in the 
 [Department of Biological Sciences](http://www.biologicalsciences.uct.ac.za/) 
