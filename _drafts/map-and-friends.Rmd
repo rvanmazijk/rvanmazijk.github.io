@@ -1,0 +1,127 @@
+---
+title: "`purrr::map()` & friends"
+author: "Ruan van Mazijk"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
+library(purrr)
+```
+
+<!--
+# Motivation: iteration
+
+The heart of the reason we programme is to tell computers to do things we'd rather not do ourselves---especially the repetetive stuff. The simplest example would be something "close to the metal", like adding all integers from 1 to 1,000,000 in a loop.
+
+Iteration problems also arise in higher level, more abstract, "further from the metal" languages---like _R_. Often we want to perform a computation on a whole set of things in exactly the same way. _R_ does us huges favours here by being vectorised for many things. This we know [...]
+-->
+
+<!--
+```{r, eval=FALSE}
+for (i in seq_along(x)) mean(i, na.rm = TRUE)
+map(x, mean, na.rm = TRUE)
+map(x, ~mean(.x, na.rm = TRUE))
+map(x, function(x) mean(x, na.rm = TRUE))
+```
+
+```{r, eval=FALSE}
+for (i in seq_along(x))            mean(i,  na.rm = TRUE)
+foreach(i =         x) %do%        mean(i,  na.rm = TRUE)
+map(                x, function(x) mean(x,  na.rm = TRUE))
+map(                x,            ~mean(.x, na.rm = TRUE))
+map(                x,             mean,    na.rm = TRUE)
+```
+-->
+
+# Summary
+
+`map(.x, .f)` can be used to apply a function `.f` to a list `.x` in 3 ways. You can supply any of the follow as the argument `.f`:
+
+1. The **function name**, with additionaly arguments afterwards as arguments to `map()` (e.g. `map(x, foo, arg1 = 12)`)
+2. A **formula** for a function (e.g. `map(x, ~foo(.x, arg1 = 12))`)
+3. An **anonymous function** (e.g. `map(x, function(x) foo(x, arg1 = 12)`)
+
+It is useful, I think, to understand all 3 different approaches. The form a continuum from the simplest and easiest to read (1) to the most general and flexible (3).
+
+# Method 1: function names
+
+No better place to start than the beginning. Supplying function names to `map()` is the simplest way to apply some function to a list. This is very similar to the `lapply`-family of functions in `base` _R_.
+
+Let's look at an example:
+
+```{r eg1a}
+# Make a list of 3 random normal distrbutions, each n = 10000
+x <- list(a = rnorm(1000), b = rnorm(1000), c = rnorm(1000))
+# Get the mean of each
+map(x, mean)
+```
+
+But what if we had missing values (`NA`s)? How do we use our go-to `mean(..., na.rm = TRUE)` in `map()`? Well, when using the function name approach, you can feed all extra arguments for the function to `map()` directly, and it will pass them along to the named function.
+
+Like so:
+
+```{r eg1b}
+# Introduce some NAs
+x$a[14:506] <- NA
+# Get the mean of each, w/ na.rm
+map(x, mean, na.rm = TRUE)
+```
+
+For the sake of explanation, this is equivalent to the for-loop:
+
+```{r eg1for}
+for (i in seq_along(x)) {
+  mean(x[[i]], na.rm = TRUE)
+}
+```
+
+# Method 2: formula notation
+
+Formula notation may seem to come out of left field here, as its not a form of _R_-syntax one often uses outside of model fitting work (e.g. `lm(y ~ x, ...)`). But it's very useful here, and has a great implementation specific to `purrr` functions.
+
+We would do what we did above using formula notation as follows:
+
+```{r eg2a}
+map(x, ~mean(.x, na.rm = TRUE))
+```
+
+There are a 2 important and _non-obvious_ details to consider when using formulas in `map()`:
+
+- Each item in the list `x` is within the formula represented by `.x`. This follows from the fact that the first argument of `map()` is `.x`. "Dot-x", as it were, is a place-holder for each item in `x`.
+- Formulae can only be a single expression of computation. You can't do multiline stuff this way.
+
+Now the latter of the points may seem like a bummer, but it encourages a `tidyverse` mainstay: pipes! The forward pipe (`%>%`) passes the results of one expression into the 1st argument of the next.
+
+What's especially great about pipes is that a string of operations linked by `%>%` is technically a single expression. This
+
+```{r pipe1, eval=FALSE}
+x %>%
+  f() %>%
+  g() %>%
+  h()
+```
+
+would not work with semicolons (`;`) in-between. To emphasise its being one expression, think of a pipe-line as:
+
+```{r pipe2, eval=FALSE}
+x %>% f() %>% g() %>% h();  # implicit semi-colon at end of expression
+```
+
+This means we can do as much as we want in formula notation in `map()` **as long as it is 1 series of piped operations**.
+
+This sort of use-case is best illustrated with some data-wrangling.
+
+
+
+<!--
+```
+x %>%
+  map(foo)
+```
+-->
+
+<!-- ... -->
