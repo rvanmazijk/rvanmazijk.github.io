@@ -13,7 +13,7 @@ My supervisors are Associate Profs [Muthama Muasya](http://www.biologicalscience
 
 ## Environmental heterogeneity & plant diversity in mediterranean-type flora {#Cape-vs-SWA}
 
-[My largest side-project](/Cape-vs-SWA/) carries on from my BSc Hons work with Associate Prof Tony Verboom and [Prof Mike Cramer](https://www.researchgate.net/profile/Michael_Cramer2). 
+My largest side-project carries on from my BSc Hons work with Associate Prof Tony Verboom and [Prof Mike Cramer](https://www.researchgate.net/profile/Michael_Cramer2). 
 
 It's a macroecology project, where we aim to quantify how environmental heterogeneity relates to patterns of plant species richness and turnover in the Greater Cape Floristic Region and in the Southwest Australia Floristic Region. We compare the environmental heterogeneity in each region, how species richness and turnover interact in each region to produce the observed patterns of richness, and what different forms of environmental heterogeneity better predict richness in each region.
 
