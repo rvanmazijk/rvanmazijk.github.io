@@ -7,7 +7,7 @@ bibliography: "2019-03-25-circular-data.bib"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, results = "hold")
 ```
 
 For the first proper blog-post on this blog, I thought I'd share a recent statistical problem I've had as part of my Masters work.
@@ -48,10 +48,10 @@ Nobody was asleep at 11h30 in the afternoon! This statistic is not very helpful.
 
 Part of this issue is that time-of-day is not a _linear_ measurement, but a _circular_ one. It does not fall on a number line, as 24h00 is the same "thing" as 00h00. Our sleeping data would be better visualised as follows (using the R-package [`ggplot2`](https://ggplot2.tidyverse.org/)) [@ggplot2]:
 
-```{r sleep-example-plot-circular, warning=FALSE, fig.cap="Circular histogram of sleeping times."}
+```{r sleep-example-plot-circular, fig.cap="Circular histogram of sleeping times."}
 library(ggplot2)
 # Set theme to something simpler, cleaner
-theme_set(theme_minimal())
+theme_set(theme_minimal() + theme(panel.grid.minor = element_blank()))
 ggplot(as.data.frame(sleeping), aes(sleeping)) +
   geom_histogram(bins = 24) +  # because 24hrs in a day
   scale_x_continuous(
@@ -111,7 +111,8 @@ flowering_times <-
   rename(clade = clade_rvm) %>%
   select(clade, species, flowering_start, flowering_end) %>%
   arrange(clade) %>%
-  filter(!is.na(clade))
+  filter(!is.na(clade)) %>%
+  filter(species != "Schoenus nigricans")
 ```
 
 ```{r print-flowering-data, echo=FALSE}
@@ -156,15 +157,14 @@ Now, let's create sequences of months that a species is in flower for, starting 
 
 ```{r get-month-seq}
 get_month_seq <- function(start, end) {
-  # Creates seq from start to end, unless end < start
-  map2(start, end, function(.start, .end) {
-    if (any(is.na(c(.start, .end)))) {
-      return(NA)
-    } else if (.start > .end) {
-      return(c(.start:12, 1:.end))  # e.g. Dec->Apr = 12, 1, 2, 3, 4
-    } else if (.start <= .end) {
-      return(.start:.end)
-    }
+  # Creates seq from start to end, unless end <= start
+  # (e.g. Nov:Feb = 11, 12, 1, 2)
+  map2(start, end, function(start, end) {
+    month_seq <- 
+      if (any(is.na(c(start, end)))) NA
+      else if (start > end)          c(start:12, 1:end)
+      else if (start <= end)         start:end
+    month_seq
   })
 }
 flowering_times <- flowering_times %>%
@@ -217,9 +217,8 @@ This is much more realistic. Problem is, it squashes up all the species in the c
 Perhaps a better summary would be a count of the number of species in flower in a given month, for each clade. Like so:
 
 ```{r plot-flowering-times-circular-bars}
-flowering_times %>%
-  filter(clade != "S. nigricans") %>%  # only 1 species, remove for this plot
-  ggplot(aes(flowering_months, fill = clade)) +
+flowering_plot2 <-
+  ggplot(flowering_times, aes(flowering_months, fill = clade)) +
     geom_bar() +
     scale_x_continuous(breaks = 1:12, labels = month.abb) +
     coord_polar() +
@@ -230,13 +229,14 @@ flowering_times %>%
       axis.title.y    = element_blank(),
       strip.text      = element_blank()  # legend duplicates facet labels
     )
+flowering_plot2
 ```
 
 Now that we've figured out how to plot the data in some useful ways, let's now try and analyses with the appropriate statistics.
 
 ### Statistics for flowering times
 
-First, let's just simply our dataset for the purposes of this exercise. I'm going to just group months where _any_ species is in flower, grouped by clade:
+First, let's just simplify the dataset for the purposes of this exercise. I'm going to just group months where _any_ species is in flower, grouped by clade:
 
 ```{r summarise-flowering-data}
 flowering_summary <- flowering_times %>%
@@ -246,48 +246,56 @@ flowering_summary <- flowering_times %>%
   # For each item in the list, return only the vector of flowering months
   map(pull, flowering_months) %>%
   # Tidy up the list's names
-  set_names(names(.) %>%
+  {set_names(., names(.) %>%
     # Replace hyphens ("-") & spaces (" ") with underscores ("_")
     str_replace_all("[-\ ]", "_") %>%
     # Remove fullstops (".")
     str_remove_all("\\.")
-  )
+  )}
 flowering_summary
 ```
 
 Now let's `circular::`-ise the data:
 
-<!--FIXME: from here down-->
-
 ```{r circularise-flowering-data}
+# FIXME: this seems buggy on the packages' part, so maybe I should just convert to radians, do the mean, then convert back?
 flowering_circular <- flowering_summary %>%
-  map(function(.x) .x * 2) %>% 
   map(as.circular,
-    type = "directions",
-    units = "hours", template = "clock24",
-    rotation = "clock"
+    type     = "directions",
+    units    = "hours", 
+    template = "clock24",  # a bit of a hack way to treat month data...
+    rotation = "clock",
+    zero = 1
   )
 flowering_circular
 ```
 
-Let's plot that with `plot.circular()` just to check that it worked:
+What are the means?
 
-```{r plot-circularised-flowering-data}
-# For each item in the list (.x) and its name (.y):
-imap(flowering_circular, ~plot(.x, main = .y))
+```{r circular-mean-flowering-data}
+flowering_circular %>%
+  map(mean, na.rm = TRUE) %>%
+  as_vector()  # Less over-whelming printing
 ```
 
-Note, where this is more than one data point (i.e. species), the points on this plots overlap.
-
-Let's try plotting the means now:
+Let's add these to our plot:
 
 ```{r plot-circularised-flowering-data-w-means}
-# What are the means?
-map(flowering_circular, mean, na.rm = TRUE)
-imap(flowering_circular, function(.x, .y) {
-  plot(.x, main = .y)
-  points(mean(.x, na.rm = TRUE), col = "red")
-})
+# Put the means in a data.frame so ggplot2 can understand
+mean_flowering_times <- flowering_circular %>%
+  map(mean, na.rm = TRUE) %>%
+  imap_dfr(~tibble(clade = .y, mean_flowering_time = .x)) %>%
+  arrange(clade) %>%
+  mutate(clade = unique(sort(flowering_times$clade)))
+flowering_plot2 +
+  geom_vline(data = mean_flowering_times, aes(xintercept = mean_flowering_time))
+par(mfrow = c(2, 3))
+flowering_circular %>%
+  iwalk(function(.x, .y) {
+    plot(.x, main = .y)
+    points(mean(.x, na.rm = TRUE), col = "red")
+  })
+par(mfrow = c(1, 1))
 ```
 
 ## Session info

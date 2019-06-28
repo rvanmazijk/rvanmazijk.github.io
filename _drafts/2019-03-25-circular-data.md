@@ -8,7 +8,7 @@ recent statistical problem I’ve had as part of my Masters work.
 One of my chapters is about comparing patterns of growth and flowering
 phenology (the timing of these sorts of events during the year) across a
 few dozen species of sedge (Cyperaceae)—gramminoid plants common here in
-the fynbos in the Cape Floristic Region.
+the fynbos of the Cape Floristic Region.
 
 For one analysis, I am comparing flowering data between six clades. The
 biological details are not the focus of this post. I am more interested
@@ -36,8 +36,8 @@ sleeping <- c(
 # Plot its distribution
 hist(sleeping,
   breaks = 24,
-  xlab = "Time of day (hour)", ylab = "No. people sleeping",
-  main = ""
+  xlab   = "Time of day (hour)", ylab = "No. people sleeping",
+  main   = ""
 )
 ```
 
@@ -65,7 +65,7 @@ follows (using the R-package
 ``` r
 library(ggplot2)
 # Set theme to something simpler, cleaner
-theme_set(theme_minimal())
+theme_set(theme_minimal() + theme(panel.grid.minor = element_blank()))
 ggplot(as.data.frame(sleeping), aes(sleeping)) +
   geom_histogram(bins = 24) +  # because 24hrs in a day
   scale_x_continuous(
@@ -78,7 +78,7 @@ ggplot(as.data.frame(sleeping), aes(sleeping)) +
     axis.title.x = element_blank(),
     # Remove non-sensical y-axis details now that plot is circular
     axis.title.y = element_blank(),
-    axis.text.y = element_blank()
+    axis.text.y  = element_blank()
   )
 ```
 
@@ -109,20 +109,16 @@ library(circular)
 
 ``` r
 sleeping <- as.circular(sleeping, 
-  type = "directions",
-  units = "hours", template = "clock24"
+  type     = "directions",
+  units    = "hours",
+  template = "clock24"
 )
-```
-
-    ## Warning in as.circular(sleeping, type = "directions", units = "hours", template = "clock24"): an object is coerced to the class 'circular' using default value for the following components:
-    ##   modulo: 'asis'
-    ##   zero: 0
-    ##   rotation: 'counter'
-    ## evalexprenvirenclos
-
-``` r
 sleeping
+plot(sleeping)
 ```
+
+![The default plot produced by the `plot.circular()`
+method.](2019-03-25-circular-data_files/figure-gfm/sleep-example-circular-pkg-1.png)
 
     ## Circular Data: 
     ## Type = directions 
@@ -134,18 +130,16 @@ sleeping
     ##  [1] 24 23 24 23 22 24 23 21 22 24 23 20 22 23 24 24  1  2  2  1  3  2  2
     ## [24]  1  1  3  4  2  3  3  4  5  5  6  3  1  1
 
-``` r
-plot(sleeping)
-```
-
-![The default plot produced by the `plot.circular()`
-method.](2019-03-25-circular-data_files/figure-gfm/sleep-example-circular-pkg-1.png)
-
 Now, the mean makes much more sense:
 
 ``` r
 mean(sleeping)
+plot(sleeping)
+points(mean(sleeping), col = "red")
 ```
+
+![The mean is now more sensible, thanks to
+`circular::`.](2019-03-25-circular-data_files/figure-gfm/sleep-example-circular-mean-1.png)
 
     ## Circular Data: 
     ## Type = directions 
@@ -156,19 +150,11 @@ mean(sleeping)
     ## Rotation = clock 
     ## [1] 1.975252
 
-``` r
-plot(sleeping)
-points(mean(sleeping), col = "red")
-```
-
-![The mean is now more sensible, thanks to
-`circular::`.](2019-03-25-circular-data_files/figure-gfm/sleep-example-circular-mean-1.png)
-
 ## My data: flowering times in Cape sedges
 
-I mentioned at the top that my motivation for this post was to share the
-application of circular statistics to some data for my Masters (albeit a
-small example thereof).
+I began this post by saying that I wanted to share the application of
+circular statistics to some data for my Masters (albeit a small example
+thereof).
 
 As above, I am comparing flowering data between six clades of gramminoid
 fynbos plants (Cyperaceae, Tribe Schoeneae), namely the genera
@@ -178,8 +164,9 @@ Africa was the cosmopolitain *S. nigricans* L. The rest, used below,
 have been transferred from *Tetraria* Beauv. to *Schoenus* L. by (n.d.).
 
 The last large-scale conspectus of the Cape flora was by Manning and
-Goldblatt (2012). The data I use here are from that flora, with species
-names ammended to much current taxonomy (as in n.d.).
+Goldblatt (2012). The flowering data I use here are from that flora,
+with species names ammended to match then current taxonomy (as in n.d.).
+Each species has flowering times as follows:
 
 | Species                 | Start | End  |
 | :---------------------- | :---- | :--- |
@@ -201,7 +188,6 @@ names ammended to much current taxonomy (as in n.d.).
 | Schoenus graminifolius  | Jul   | Nov  |
 | Schoenus laticulmis     | May   | Dec  |
 | Schoenus variabilis     | Apr   | June |
-| Schoenus nigricans      | May   | Oct  |
 | Tetraria capillacea     | Oct   | Nov  |
 | Tetraria crinifolia     | Aug   | Oct  |
 | Tetraria fasciata       | Nov   | May  |
@@ -238,22 +224,6 @@ For now, let’s unpack how to take `"Jan"`, `"Feb"`, `"Mar"` and turn it
 into meaningful numerical data, and treat that data circularly such that
 December and January are adjecent.
 
-I will be using the [`tidyverse`]()-suite of packages for wrangling
-these data. Briefly, if you are unfamiliar, the logic of
-`tidy`-functions is:
-
-``` r
-data %>%
-  verb1() %>%
-  verb2() %>%
-  verb3()
-```
-
-where `%>%` (the forward pipe) passes the results before the pipe to the
-function ahead of the pipe, so that instead of `f(g(h(x)))` (nesting
-gets confusing), we use `x %>% f() %>% g() %>% h()`, as in the above
-example with `data` and `verb*()`.
-
 ### Flowering months as numerical data
 
 First, we need to convert the monthly abbreviations into numbers. Simple
@@ -264,10 +234,11 @@ rows’ `flowering_start` and `flowering_end` values, row-by-row, using
 ``` r
 get_month_int <- function(month_abb) {
   # Converts "Jan", "Feb", etc. -> 1, 2, etc.
-  map_int(month_abb, ~ifelse(.x %in% month.abb,
-    which(month.abb == .x),
-    NA
-  ))
+  month_abb %>%
+    map_int(~ ifelse(.x %in% month.abb,
+      which(month.abb == .x),
+      NA
+    ))
 }
 # Apply get_month_int() to the data
 flowering_times <- flowering_times %>%
@@ -278,20 +249,20 @@ flowering_times <- flowering_times %>%
 flowering_times
 ```
 
-    ## # A tibble: 43 x 4
-    ##    clade               species               flowering_start flowering_end
-    ##    <chr>               <chr>                           <int>         <int>
-    ##  1 Epischoenus spp.    Schoenus adnatus                    2             8
-    ##  2 Epischoenus spp.    Schoenus complanatus               12             3
-    ##  3 Epischoenus spp.    Schoenus dregeanus                 12             4
-    ##  4 Epischoenus spp.    Schoenus gracilimus                12             3
-    ##  5 Epischoenus spp.    Schoenus lucidus                   12            12
-    ##  6 Epischoenus spp.    Schoenus quadrangula…              11             5
-    ##  7 Epischoenus spp.    Schoenus neovillosus                1             2
-    ##  8 S. compar-S. pictus Schoenus arenicola                  7            11
-    ##  9 S. compar-S. pictus Schoenus compar                     4             6
-    ## 10 S. compar-S. pictus Schoenus pictus                    12             5
-    ## # ... with 33 more rows
+    ## # A tibble: 42 x 4
+    ##    clade               species                flowering_start flowering_end
+    ##    <chr>               <chr>                            <int>         <int>
+    ##  1 Epischoenus spp.    Schoenus adnatus                     2             8
+    ##  2 Epischoenus spp.    Schoenus complanatus                12             3
+    ##  3 Epischoenus spp.    Schoenus dregeanus                  12             4
+    ##  4 Epischoenus spp.    Schoenus gracilimus                 12             3
+    ##  5 Epischoenus spp.    Schoenus lucidus                    12            12
+    ##  6 Epischoenus spp.    Schoenus quadrangular…              11             5
+    ##  7 Epischoenus spp.    Schoenus neovillosus                 1             2
+    ##  8 S. compar-S. pictus Schoenus arenicola                   7            11
+    ##  9 S. compar-S. pictus Schoenus compar                      4             6
+    ## 10 S. compar-S. pictus Schoenus pictus                     12             5
+    ## # … with 32 more rows
 
 Now, let’s create sequences of months that a species is in flower for,
 starting at `flowering_start`, ending at `flowering_end`. This will be
@@ -302,15 +273,14 @@ again, using [`purrr`]()–a functional programming package for R.
 
 ``` r
 get_month_seq <- function(start, end) {
-  # Creates seq from start to end, unless end < start
-  map2(start, end, function(.start, .end) {
-    if (any(is.na(c(.start, .end)))) {
-      return(NA)
-    } else if (.start > .end) {
-      return(c(.start:12, 1:.end))  # e.g. Dec->Apr = 12, 1, 2, 3, 4
-    } else if (.start <= .end) {
-      return(.start:.end)
-    }
+  # Creates seq from start to end, unless end <= start
+  # (e.g. Nov:Feb = 11, 12, 1, 2)
+  map2(start, end, function(start, end) {
+    month_seq <- 
+      if (any(is.na(c(start, end)))) NA
+      else if (start > end)          c(start:12, 1:end)
+      else if (start <= end)         start:end
+    month_seq
   })
 }
 flowering_times <- flowering_times %>%
@@ -318,20 +288,20 @@ flowering_times <- flowering_times %>%
 flowering_times
 ```
 
-    ## # A tibble: 43 x 5
-    ##    clade       species      flowering_start flowering_end flowering_months
-    ##    <chr>       <chr>                  <int>         <int> <list>          
-    ##  1 Epischoenu… Schoenus ad…               2             8 <int [7]>       
-    ##  2 Epischoenu… Schoenus co…              12             3 <int [4]>       
-    ##  3 Epischoenu… Schoenus dr…              12             4 <int [5]>       
-    ##  4 Epischoenu… Schoenus gr…              12             3 <int [4]>       
-    ##  5 Epischoenu… Schoenus lu…              12            12 <int [1]>       
-    ##  6 Epischoenu… Schoenus qu…              11             5 <int [7]>       
-    ##  7 Epischoenu… Schoenus ne…               1             2 <int [2]>       
-    ##  8 S. compar-… Schoenus ar…               7            11 <int [5]>       
-    ##  9 S. compar-… Schoenus co…               4             6 <int [3]>       
-    ## 10 S. compar-… Schoenus pi…              12             5 <int [6]>       
-    ## # ... with 33 more rows
+    ## # A tibble: 42 x 5
+    ##    clade       species       flowering_start flowering_end flowering_months
+    ##    <chr>       <chr>                   <int>         <int> <list>          
+    ##  1 Epischoenu… Schoenus adn…               2             8 <int [7]>       
+    ##  2 Epischoenu… Schoenus com…              12             3 <int [4]>       
+    ##  3 Epischoenu… Schoenus dre…              12             4 <int [5]>       
+    ##  4 Epischoenu… Schoenus gra…              12             3 <int [4]>       
+    ##  5 Epischoenu… Schoenus luc…              12            12 <int [1]>       
+    ##  6 Epischoenu… Schoenus qua…              11             5 <int [7]>       
+    ##  7 Epischoenu… Schoenus neo…               1             2 <int [2]>       
+    ##  8 S. compar-… Schoenus are…               7            11 <int [5]>       
+    ##  9 S. compar-… Schoenus com…               4             6 <int [3]>       
+    ## 10 S. compar-… Schoenus pic…              12             5 <int [6]>       
+    ## # … with 32 more rows
 
 Lastly, we just need to reshape this data into a form `ggplot2` can
 understand: long-form data.
@@ -345,20 +315,20 @@ flowering_times <- flowering_times %>%
 flowering_times
 ```
 
-    ## # A tibble: 179 x 5
-    ##    clade            species flowering_start flowering_end flowering_months
-    ##    <chr>            <fct>             <int>         <int>            <int>
-    ##  1 Epischoenus spp. Schoen…               2             8                2
-    ##  2 Epischoenus spp. Schoen…               2             8                3
-    ##  3 Epischoenus spp. Schoen…               2             8                4
-    ##  4 Epischoenus spp. Schoen…               2             8                5
-    ##  5 Epischoenus spp. Schoen…               2             8                6
-    ##  6 Epischoenus spp. Schoen…               2             8                7
-    ##  7 Epischoenus spp. Schoen…               2             8                8
-    ##  8 Epischoenus spp. Schoen…              12             3               12
-    ##  9 Epischoenus spp. Schoen…              12             3                1
-    ## 10 Epischoenus spp. Schoen…              12             3                2
-    ## # ... with 169 more rows
+    ## # A tibble: 173 x 5
+    ##    clade       species       flowering_start flowering_end flowering_months
+    ##    <chr>       <fct>                   <int>         <int>            <int>
+    ##  1 Epischoenu… Schoenus adn…               2             8                2
+    ##  2 Epischoenu… Schoenus adn…               2             8                3
+    ##  3 Epischoenu… Schoenus adn…               2             8                4
+    ##  4 Epischoenu… Schoenus adn…               2             8                5
+    ##  5 Epischoenu… Schoenus adn…               2             8                6
+    ##  6 Epischoenu… Schoenus adn…               2             8                7
+    ##  7 Epischoenu… Schoenus adn…               2             8                8
+    ##  8 Epischoenu… Schoenus com…              12             3               12
+    ##  9 Epischoenu… Schoenus com…              12             3                1
+    ## 10 Epischoenu… Schoenus com…              12             3                2
+    ## # … with 163 more rows
 
 ### Plotting flowering times
 
@@ -370,13 +340,11 @@ flowering_plot <-
     geom_tile() +
     scale_x_continuous(breaks = 1:12, labels = month.abb) +
     theme(
-      axis.title.x = element_blank(),  # No need for x-axis title
-      axis.text.y  = element_text(hjust = 0)  # Left-justify species names
+      axis.title.x = element_blank(),  # no need for x-axis title
+      axis.text.y  = element_text(hjust = 0)  # left-justify species names
     )
 flowering_plot
 ```
-
-    ## Warning: Removed 1 rows containing missing values (geom_tile).
 
 ![](2019-03-25-circular-data_files/figure-gfm/plot-flowering-times-linear-1.png)<!-- -->
 
@@ -394,8 +362,6 @@ flowering_plot +
   )
 ```
 
-    ## Warning: Removed 1 rows containing missing values (geom_tile).
-
 ![](2019-03-25-circular-data_files/figure-gfm/plot-flowering-times-circular-1.png)<!-- -->
 
 This is much more realistic. Problem is, it squashes up all the species
@@ -405,9 +371,8 @@ Perhaps a better summary would be a count of the number of species in
 flower in a given month, for each clade. Like so:
 
 ``` r
-flowering_times %>%
-  filter(clade != "S. nigricans") %>%  # nly 1 species, remove for this plot
-  ggplot(aes(flowering_months, fill = clade)) +
+flowering_plot2 <-
+  ggplot(flowering_times, aes(flowering_months, fill = clade)) +
     geom_bar() +
     scale_x_continuous(breaks = 1:12, labels = month.abb) +
     coord_polar() +
@@ -418,11 +383,185 @@ flowering_times %>%
       axis.title.y    = element_blank(),
       strip.text      = element_blank()  # legend duplicates facet labels
     )
+flowering_plot2
 ```
 
-    ## Warning: Removed 1 rows containing non-finite values (stat_count).
-
 ![](2019-03-25-circular-data_files/figure-gfm/plot-flowering-times-circular-bars-1.png)<!-- -->
+
+Now that we’ve figured out how to plot the data in some useful ways,
+let’s now try and analyses with the appropriate statistics.
+
+### Statistics for flowering times
+
+First, let’s just simplify the dataset for the purposes of this
+exercise. I’m going to just group months where *any* species is in
+flower, grouped by clade:
+
+``` r
+flowering_summary <- flowering_times %>%
+  select(clade, flowering_months) %>%
+  # Split the dataframe into a list according to clade
+  split(.$clade) %>%
+  # For each item in the list, return only the vector of flowering months
+  map(pull, flowering_months) %>%
+  # Tidy up the list's names
+  {set_names(., names(.) %>%
+    # Replace hyphens ("-") & spaces (" ") with underscores ("_")
+    str_replace_all("[-\ ]", "_") %>%
+    # Remove fullstops (".")
+    str_remove_all("\\.")
+  )}
+flowering_summary
+```
+
+    ## $Epischoenus_spp
+    ##  [1]  2  3  4  5  6  7  8 12  1  2  3 12  1  2  3  4 12  1  2  3 12 11 12
+    ## [24]  1  2  3  4  5  1  2
+    ## 
+    ## $S_compar_S_pictus
+    ##  [1]  7  8  9 10 11  4  5  6 12  1  2  3  4  5
+    ## 
+    ## $S_cuspidatus_et_al
+    ##  [1]  7  8  8  9 10 11  4  5  6  8  9 10 11  4  5  6  7  8  9 10 11  5  6
+    ## [24]  7  8  9 10 11 12 NA
+    ## 
+    ## $T_fasciata_T_flexuosa
+    ##  [1] 10 11  8  9 10 11 12  1  2  3  4  5  3  4  5  6  7  1  2  3  4  5  1
+    ## [24]  2  3  4  5 12  1  2  1  2  3  4  5 10 11
+    ## 
+    ## $T_microstachys_T_burmannii
+    ##  [1] 11 12  1  2  3  4  1  2  3  4 12  1  2  1  2  3  4  1  2 10 11 12  1
+    ## [24]  2  3  4  2  3  4  9 10 11 12  1  2  3  4
+    ## 
+    ## $T_thermalis_T_bromoides
+    ##  [1] 10 11 12  1  2  5  6  7  8  1  2  3  4  2  3  4  5  6  7  8  9 10  2
+    ## [24]  3  4
+
+Now let’s `circular::`-ise the
+data:
+
+``` r
+# FIXME: this seems buggy on the packages' part, so maybe I should just convert to radians, do the mean, then convert back?
+flowering_circular <- flowering_summary %>%
+  map(as.circular,
+    type     = "directions",
+    units    = "hours", 
+    template = "clock24",  # a bit of a hack way to treat month data...
+    rotation = "clock",
+    zero = 1
+  )
+flowering_circular
+```
+
+    ## $Epischoenus_spp
+    ## Circular Data: 
+    ## Type = directions 
+    ## Units = hours 
+    ## Template = clock24 
+    ## Modulo = asis 
+    ## Zero = 1.570796 
+    ## Rotation = clock 
+    ##  [1]  2  3  4  5  6  7  8 12  1  2  3 12  1  2  3  4 12  1  2  3 12 11 12
+    ## [24]  1  2  3  4  5  1  2
+    ## 
+    ## $S_compar_S_pictus
+    ## Circular Data: 
+    ## Type = directions 
+    ## Units = hours 
+    ## Template = clock24 
+    ## Modulo = asis 
+    ## Zero = 1.570796 
+    ## Rotation = clock 
+    ##  [1]  7  8  9 10 11  4  5  6 12  1  2  3  4  5
+    ## 
+    ## $S_cuspidatus_et_al
+    ## Circular Data: 
+    ## Type = directions 
+    ## Units = hours 
+    ## Template = clock24 
+    ## Modulo = asis 
+    ## Zero = 1.570796 
+    ## Rotation = clock 
+    ##  [1]  7  8  8  9 10 11  4  5  6  8  9 10 11  4  5  6  7  8  9 10 11  5  6
+    ## [24]  7  8  9 10 11 12 NA
+    ## 
+    ## $T_fasciata_T_flexuosa
+    ## Circular Data: 
+    ## Type = directions 
+    ## Units = hours 
+    ## Template = clock24 
+    ## Modulo = asis 
+    ## Zero = 1.570796 
+    ## Rotation = clock 
+    ##  [1] 10 11  8  9 10 11 12  1  2  3  4  5  3  4  5  6  7  1  2  3  4  5  1
+    ## [24]  2  3  4  5 12  1  2  1  2  3  4  5 10 11
+    ## 
+    ## $T_microstachys_T_burmannii
+    ## Circular Data: 
+    ## Type = directions 
+    ## Units = hours 
+    ## Template = clock24 
+    ## Modulo = asis 
+    ## Zero = 1.570796 
+    ## Rotation = clock 
+    ##  [1] 11 12  1  2  3  4  1  2  3  4 12  1  2  1  2  3  4  1  2 10 11 12  1
+    ## [24]  2  3  4  2  3  4  9 10 11 12  1  2  3  4
+    ## 
+    ## $T_thermalis_T_bromoides
+    ## Circular Data: 
+    ## Type = directions 
+    ## Units = hours 
+    ## Template = clock24 
+    ## Modulo = asis 
+    ## Zero = 1.570796 
+    ## Rotation = clock 
+    ##  [1] 10 11 12  1  2  5  6  7  8  1  2  3  4  2  3  4  5  6  7  8  9 10  2
+    ## [24]  3  4
+
+What are the means?
+
+``` r
+flowering_circular %>%
+  map(mean, na.rm = TRUE) %>%
+  as_vector()  # Less over-whelming printing
+```
+
+    ##            Epischoenus_spp          S_compar_S_pictus 
+    ##                   8.024536                  12.195391 
+    ##         S_cuspidatus_et_al      T_fasciata_T_flexuosa 
+    ##                  16.188765                   9.513487 
+    ## T_microstachys_T_burmannii    T_thermalis_T_bromoides 
+    ##                   7.576192                  10.381947
+
+Let’s add these to our plot:
+
+``` r
+# Put the means in a data.frame so ggplot2 can understand
+mean_flowering_times <- flowering_circular %>%
+  map(mean, na.rm = TRUE) %>%
+  imap_dfr(~tibble(clade = .y, mean_flowering_time = .x)) %>%
+  arrange(clade) %>%
+  mutate(clade = unique(sort(flowering_times$clade)))
+flowering_plot2 +
+  geom_vline(data = mean_flowering_times, aes(xintercept = mean_flowering_time))
+```
+
+![](2019-03-25-circular-data_files/figure-gfm/plot-circularised-flowering-data-w-means-1.png)<!-- -->
+
+``` r
+par(mfrow = c(2, 3))
+flowering_circular %>%
+  iwalk(function(.x, .y) {
+    plot(.x, main = .y)
+    points(mean(.x, na.rm = TRUE), col = "red")
+  })
+```
+
+![](2019-03-25-circular-data_files/figure-gfm/plot-circularised-flowering-data-w-means-2.png)<!-- -->
+
+``` r
+par(mfrow = c(1, 1))
+```
 
 ## Session info
 
@@ -435,7 +574,7 @@ sessionInfo()
 
     ## R version 3.5.0 (2018-04-23)
     ## Platform: x86_64-apple-darwin15.6.0 (64-bit)
-    ## Running under: macOS  10.14.3
+    ## Running under: macOS  10.14.5
     ## 
     ## Matrix products: default
     ## BLAS: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRblas.0.dylib
@@ -448,24 +587,24 @@ sessionInfo()
     ## [1] stats     graphics  grDevices utils     datasets  methods   base     
     ## 
     ## other attached packages:
-    ##  [1] bindrcpp_0.2.2  forcats_0.3.0   stringr_1.3.1   dplyr_0.7.5    
-    ##  [5] purrr_0.2.5     readr_1.1.1     tidyr_0.8.1     tibble_1.4.2   
-    ##  [9] tidyverse_1.2.1 here_0.1        circular_0.4-93 ggplot2_2.2.1  
+    ##  [1] forcats_0.4.0   stringr_1.4.0   dplyr_0.8.0.1   purrr_0.3.2    
+    ##  [5] readr_1.3.1     tidyr_0.8.3     tibble_2.1.1    tidyverse_1.2.1
+    ##  [9] here_0.1        circular_0.4-93 ggplot2_3.1.1  
     ## 
     ## loaded via a namespace (and not attached):
-    ##  [1] tidyselect_0.2.4 reshape2_1.4.3   haven_1.1.1      lattice_0.20-35 
-    ##  [5] colorspace_1.3-2 htmltools_0.3.6  yaml_2.1.19      utf8_1.1.4      
-    ##  [9] rlang_0.2.1      pillar_1.2.3     foreign_0.8-70   glue_1.2.0      
-    ## [13] modelr_0.1.2     readxl_1.1.0     bindr_0.1.1      plyr_1.8.4      
-    ## [17] cellranger_1.1.0 munsell_0.4.3    gtable_0.2.0     rvest_0.3.2     
-    ## [21] mvtnorm_1.0-8    psych_1.8.4      evaluate_0.10.1  labeling_0.3    
-    ## [25] knitr_1.20       parallel_3.5.0   highr_0.6        broom_0.4.4     
-    ## [29] Rcpp_0.12.18     scales_0.5.0     backports_1.1.2  jsonlite_1.5    
-    ## [33] mnormt_1.5-5     hms_0.4.2        digest_0.6.15    stringi_1.2.2   
-    ## [37] grid_3.5.0       rprojroot_1.3-2  cli_1.0.0        tools_3.5.0     
-    ## [41] magrittr_1.5     lazyeval_0.2.1   crayon_1.3.4     pkgconfig_2.0.1 
-    ## [45] xml2_1.2.0       lubridate_1.7.4  rstudioapi_0.7   assertthat_0.2.0
-    ## [49] rmarkdown_1.9    httr_1.3.1       R6_2.2.2         boot_1.3-20     
+    ##  [1] tidyselect_0.2.5 xfun_0.6         haven_2.1.0      lattice_0.20-38 
+    ##  [5] vctrs_0.1.0      colorspace_1.4-1 generics_0.0.2   htmltools_0.3.6 
+    ##  [9] yaml_2.2.0       utf8_1.1.4       rlang_0.3.4      pillar_1.4.0    
+    ## [13] glue_1.3.1       withr_2.1.2      modelr_0.1.4     readxl_1.3.1    
+    ## [17] plyr_1.8.4       munsell_0.5.0    gtable_0.3.0     cellranger_1.1.0
+    ## [21] rvest_0.3.3      mvtnorm_1.0-10   evaluate_0.13    labeling_0.3    
+    ## [25] knitr_1.22       fansi_0.4.0      highr_0.8        broom_0.5.2     
+    ## [29] Rcpp_1.0.1       scales_1.0.0     backports_1.1.4  jsonlite_1.6    
+    ## [33] hms_0.4.2        digest_0.6.19    stringi_1.4.3    grid_3.5.0      
+    ## [37] rprojroot_1.3-2  cli_1.1.0        tools_3.5.0      magrittr_1.5    
+    ## [41] lazyeval_0.2.2   zeallot_0.1.0    crayon_1.3.4     pkgconfig_2.0.2 
+    ## [45] xml2_1.2.0       lubridate_1.7.4  rstudioapi_0.10  assertthat_0.2.1
+    ## [49] rmarkdown_1.12   httr_1.4.0       R6_2.4.0         boot_1.3-22     
     ## [53] nlme_3.1-137     compiler_3.5.0
 
 ## Further reading
