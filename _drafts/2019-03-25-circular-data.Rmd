@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 For the first proper blog-post on this blog, I thought I'd share a recent statistical problem I've had as part of my Masters work.
 
-One of my chapters is about comparing patterns of growth and flowering phenology (the timing of these sorts of events during the year) across a few dozen species of sedge (Cyperaceae)---gramminoid plants common here in the fynbos in the Cape Floristic Region.
+One of my chapters is about comparing patterns of growth and flowering phenology (the timing of these sorts of events during the year) across a few dozen species of sedge (Cyperaceae)---gramminoid plants common here in the fynbos of the Cape Floristic Region.
 
 For one analysis, I am comparing flowering data between six clades. The biological details are not the focus of this post. I am more interested (for the moment) in sharing the analytical approach I've learnt.
 
@@ -33,8 +33,8 @@ sleeping <- c(
 # Plot its distribution
 hist(sleeping,
   breaks = 24,
-  xlab = "Time of day (hour)", ylab = "No. people sleeping",
-  main = ""
+  xlab   = "Time of day (hour)", ylab = "No. people sleeping",
+  main   = ""
 )
 ```
 
@@ -48,7 +48,7 @@ Nobody was asleep at 11h30 in the afternoon! This statistic is not very helpful.
 
 Part of this issue is that time-of-day is not a _linear_ measurement, but a _circular_ one. It does not fall on a number line, as 24h00 is the same "thing" as 00h00. Our sleeping data would be better visualised as follows (using the R-package [`ggplot2`](https://ggplot2.tidyverse.org/)) [@ggplot2]:
 
-```{r sleep-example-plot-circular, fig.cap="Circular histogram of sleeping times."}
+```{r sleep-example-plot-circular, warning=FALSE, fig.cap="Circular histogram of sleeping times."}
 library(ggplot2)
 # Set theme to something simpler, cleaner
 theme_set(theme_minimal())
@@ -64,7 +64,7 @@ ggplot(as.data.frame(sleeping), aes(sleeping)) +
     axis.title.x = element_blank(),
     # Remove non-sensical y-axis details now that plot is circular
     axis.title.y = element_blank(),
-    axis.text.y = element_blank()
+    axis.text.y  = element_blank()
   )
 ```
 
@@ -75,8 +75,9 @@ To convert data into explicitly circular data, we use `circular::as.circular()`,
 ```{r sleep-example-circular-pkg, fig.cap="The default plot produced by the `plot.circular()` method."}
 library(circular)
 sleeping <- as.circular(sleeping, 
-  type = "directions",
-  units = "hours", template = "clock24"
+  type     = "directions",
+  units    = "hours",
+  template = "clock24"
 )
 sleeping
 plot(sleeping)
@@ -92,17 +93,18 @@ points(mean(sleeping), col = "red")
 
 ## My data: flowering times in Cape sedges
 
-I mentioned at the top that my motivation for this post was to share the application of circular statistics to some data for my Masters (albeit a small example thereof).
+I began this post by saying that I wanted to share the application of circular statistics to some data for my Masters (albeit a small example thereof).
 
 As above, I am comparing flowering data between six clades of gramminoid fynbos plants (Cyperaceae, Tribe Schoeneae), namely the genera _Schoenus_ L. and _Tetraria_ Beauv. _Tetraria_ is known to be polyphyletic, and until recently the only _Schoenus_ species in southern Africa was the cosmopolitain _S. nigricans_ L. The rest, used below, have been transferred from _Tetraria_ Beauv. to _Schoenus_ L. by @elliott2018.
 
-The last large-scale conspectus of the Cape flora was by @manning2012. The data I use here are from that flora, with species names ammended to much current taxonomy [as in @elliott2018].
+The last large-scale conspectus of the Cape flora was by @manning2012. The flowering data I use here are from that flora, with species names ammended to match then current taxonomy [as in @elliott2018]. Each species has flowering times as follows:
 
 ```{r setup-flowering-data, include=FALSE}
 library(here)
 library(tidyverse)
 flowering_times <- 
-  read_csv(here("assets/data",
+  read_csv(here(
+    "assets/data",
     "CFR-Schoeneae-flowering-times_from-Manning-and-Goldblatt-2012_rvm.csv"
   )) %>%
   mutate(species = ifelse(is.na(new_name_rvm), species, new_name_rvm)) %>%
@@ -128,17 +130,6 @@ Along with these data, taxonomic research groups these species into three clades
 
 For now, let's unpack how to take `"Jan"`, `"Feb"`, `"Mar"` and turn it into meaningful numerical data, and treat that data circularly such that December and January are adjecent.
 
-I will be using the [`tidyverse`]()-suite of packages for wrangling these data. Briefly, if you are unfamiliar, the logic of `tidy`-functions is:
-
-```{r tidy-example, eval=FALSE}
-data %>%
-  verb1() %>%
-  verb2() %>%
-  verb3()
-```
-
-where `%>%` (the forward pipe) passes the results before the pipe to the function ahead of the pipe, so that instead of `f(g(h(x)))` (nesting gets confusing), we use `x %>% f() %>% g() %>% h()`, as in the above example with `data` and `verb*()`.
-
 ### Flowering months as numerical data
 
 First, we need to convert the monthly abbreviations into numbers. Simple enough: `"Jan"` = 1, `"Feb"` = 2, etc. I apply this process for each rows' `flowering_start` and `flowering_end` values, row-by-row, using [`purrr`]()--a functional programming package for R.
@@ -146,10 +137,11 @@ First, we need to convert the monthly abbreviations into numbers. Simple enough:
 ```{r get-month-int}
 get_month_int <- function(month_abb) {
   # Converts "Jan", "Feb", etc. -> 1, 2, etc.
-  map_int(month_abb, ~ifelse(.x %in% month.abb,
-    which(month.abb == .x),
-    NA
-  ))
+  month_abb %>%
+    map_int(~ ifelse(.x %in% month.abb,
+      which(month.abb == .x),
+      NA
+    ))
 }
 # Apply get_month_int() to the data
 flowering_times <- flowering_times %>%
