@@ -11,7 +11,7 @@ I have written a few tutorials about R and related tools for my colleagues in my
 
 - [R tutorial](/R-tut-for-Muasya-lab/), for the Muasya Lab
 - [An introduction to R Markdown](/Rmd-tut-for-West-lab/), for the West Lab. My slides, which contain the same content as the webpage, are [here](https://speakerdeck.com/rvanmazijk/an-introduction-to-r-markdown).
-- [Data wrangling & manipulation in R](/data-wrangling-workshop/), a three-afternoon workshop on the [`tidyverse`](https://www.tidyverse.org/) ecosystem of R-packges, focussing on [`tidyr`](https://tidyr.tidyverse.org/) and [`dplyr`](https://dplyr.tidyverse.org/). This workshop is due to run 1--3 July at the University of Cape Town, and is currently being prepared.
+- [Data wrangling & manipulation in R](/data-wrangling-workshop/), a three-afternoon workshop on the [`tidyverse`](https://www.tidyverse.org/) ecosystem of R-packges, focussing on [`tidyr`](https://tidyr.tidyverse.org/) and [`dplyr`](https://dplyr.tidyverse.org/). I ran this workshop from 1--3 July 2019 for my colleagues in the Department of Biological Sciences at the University of Cape Town.
 
 ## Teaching biology
 
