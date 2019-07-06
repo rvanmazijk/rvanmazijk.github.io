@@ -3,7 +3,7 @@ title: "Wrapping my head around circular means"
 author: "Ruan van Mazijk"
 output: github_document
 fig_caption: true
-bibliography: "2019-03-25-circular-data.bib"
+bibliography: "2019-07-06-circular-data.bib"
 ---
 
 ```{r setup, include=FALSE}

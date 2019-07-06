@@ -42,7 +42,7 @@ hist(sleeping,
 ```
 
 ![Histogram of sleeping
-times.](2019-03-25-circular-data_files/figure-gfm/sleep-example-plot-linear-1.png)
+times.](2019-07-06-circular-data_files/figure-gfm/sleep-example-plot-linear-1.png)
 
 From this made-up data it is clear that people sleep at night. But our
 go-to statistic, the mean, fails at describing this:
@@ -83,7 +83,7 @@ ggplot(as.data.frame(sleeping), aes(sleeping)) +
 ```
 
 ![Circular histogram of sleeping
-times.](2019-03-25-circular-data_files/figure-gfm/sleep-example-plot-circular-1.png)
+times.](2019-07-06-circular-data_files/figure-gfm/sleep-example-plot-circular-1.png)
 
 Here, it is much clearer that people tend to be asleep around 00h00 to
 01h00. The R-package
@@ -118,7 +118,7 @@ plot(sleeping)
 ```
 
 ![The default plot produced by the `plot.circular()`
-method.](2019-03-25-circular-data_files/figure-gfm/sleep-example-circular-pkg-1.png)
+method.](2019-07-06-circular-data_files/figure-gfm/sleep-example-circular-pkg-1.png)
 
     ## Circular Data: 
     ## Type = directions 
@@ -139,7 +139,7 @@ points(mean(sleeping), col = "red")
 ```
 
 ![The mean is now more sensible, thanks to
-`circular::`.](2019-03-25-circular-data_files/figure-gfm/sleep-example-circular-mean-1.png)
+`circular::`.](2019-07-06-circular-data_files/figure-gfm/sleep-example-circular-mean-1.png)
 
     ## Circular Data: 
     ## Type = directions 
@@ -348,7 +348,7 @@ flowering_plot <-
 flowering_plot
 ```
 
-![](2019-03-25-circular-data_files/figure-gfm/plot-flowering-times-linear-1.png)<!-- -->
+![](2019-07-06-circular-data_files/figure-gfm/plot-flowering-times-linear-1.png)<!-- -->
 
 It’s clear that all the (austral) summer flowering species
 (`"Dec"`–`"Feb"`) could really benefit from a circular plot. Thus:
@@ -364,7 +364,7 @@ flowering_plot +
   )
 ```
 
-![](2019-03-25-circular-data_files/figure-gfm/plot-flowering-times-circular-1.png)<!-- -->
+![](2019-07-06-circular-data_files/figure-gfm/plot-flowering-times-circular-1.png)<!-- -->
 
 This is much more realistic. Problem is, it squashes up all the species
 in the centre of the circle.
@@ -388,7 +388,7 @@ flowering_plot2 <-
 flowering_plot2
 ```
 
-![](2019-03-25-circular-data_files/figure-gfm/plot-flowering-times-circular-bars-1.png)<!-- -->
+![](2019-07-06-circular-data_files/figure-gfm/plot-flowering-times-circular-bars-1.png)<!-- -->
 
 Now that we’ve figured out how to plot the data in some useful ways,
 let’s now try and analyses with the appropriate statistics.
@@ -520,7 +520,7 @@ flowering_plot2 +
   geom_vline(data = mean_flowering_times, aes(xintercept = mean_flowering_time))
 ```
 
-![](2019-03-25-circular-data_files/figure-gfm/plot-circularised-flowering-data-w-means-1.png)<!-- -->
+![](2019-07-06-circular-data_files/figure-gfm/plot-circularised-flowering-data-w-means-1.png)<!-- -->
 
 Those means seem to make sense—they are at the intuitive centre of each
 clade’s flowering distribution\! Hooray\!
