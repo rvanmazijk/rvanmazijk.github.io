@@ -95,7 +95,7 @@ points(mean(sleeping), col = "red")
 
 I began this post by saying that I wanted to share the application of circular statistics to some data for my Masters (albeit a small example thereof).
 
-As above, I am comparing flowering data between six clades of gramminoid fynbos plants (Cyperaceae, Tribe Schoeneae), namely the genera _Schoenus_ L. and _Tetraria_ Beauv. _Tetraria_ is known to be polyphyletic, and until recently the only _Schoenus_ species in southern Africa was the cosmopolitain _S. nigricans_ L. The rest, used below, have been transferred from _Tetraria_ Beauv. to _Schoenus_ L. by @elliott2018.
+As above, I am comparing flowering data between six clades of gramminoid fynbos plants (Cyperaceae, Tribe Schoeneae), namely the genera _Schoenus_ L. and _Tetraria_ Beauv. _Tetraria_ is known to be polyphyletic, and until recently the only _Schoenus_ species in southern Africa was the cosmopolitain _S. nigricans_ L. The rest, used below, have been transferred from _Tetraria_ Beauv. to _Schoenus_ L. by @elliott2017.
 
 The last large-scale conspectus of the Cape flora was by @manning2012. The flowering data I use here are from that flora, with species names ammended to match then current taxonomy [as in @elliott2018]. Each species has flowering times as follows:
 
@@ -255,7 +255,7 @@ flowering_summary <- flowering_times %>%
 flowering_summary
 ```
 
-Now let's `circular::`-ise and mean the data:
+Now let's `circular::`-ise and mean the data (I also use the package `astroFns` [@astroFns] to help convert my data into radians, which seems to be the simplest way to work with circular data):
 
 ```{r helper-functions}
 library(tidyverse)
@@ -285,12 +285,10 @@ my_circular_mean <- function(x) {
 
 ```{r circular-mean-flowering-data}
 flowering_circular_means <- flowering_summary %>%
-  map(~.x[!is.na(.x)]) %>%  # FIXME/TODO: track down this NA!
+  map(~.x[!is.na(.x)]) %>%  # FIXME/TODO: track down this NA for my MSc...
   map(my_circular_mean)
 flowering_circular_means
 ```
-
-What are the means?
 
 Let's add these to our plot:
 
@@ -304,6 +302,8 @@ flowering_plot2 +
   geom_vline(data = mean_flowering_times, aes(xintercept = mean_flowering_time))
 ```
 
+Those means seem to make sense---they are at the intuitive centre of each clade's flowering distribution! Hooray!
+
 ## Session info
 
 I present here my machine's state at time of writing, for reproducibility's sake.
@@ -311,7 +311,5 @@ I present here my machine's state at time of writing, for reproducibility's sake
 ```{r sessionInfo}
 sessionInfo()
 ```
-
-## Further reading
 
 ## References

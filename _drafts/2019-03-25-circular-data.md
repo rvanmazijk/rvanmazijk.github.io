@@ -161,11 +161,13 @@ fynbos plants (Cyperaceae, Tribe Schoeneae), namely the genera
 *Schoenus* L. and *Tetraria* Beauv. *Tetraria* is known to be
 polyphyletic, and until recently the only *Schoenus* species in southern
 Africa was the cosmopolitain *S. nigricans* L. The rest, used below,
-have been transferred from *Tetraria* Beauv. to *Schoenus* L. by (n.d.).
+have been transferred from *Tetraria* Beauv. to *Schoenus* L. by Elliott
+and Muasya (2017).
 
 The last large-scale conspectus of the Cape flora was by Manning and
 Goldblatt (2012). The flowering data I use here are from that flora,
-with species names ammended to match then current taxonomy (as in n.d.).
+with species names ammended to match then current taxonomy (as in
+<span class="citeproc-not-found" data-reference-id="elliott2018">**???**</span>).
 Each species has flowering times as follows:
 
 | Species                 | Start | End  |
@@ -437,7 +439,9 @@ flowering_summary
     ##  [1] 10 11 12  1  2  5  6  7  8  1  2  3  4  2  3  4  5  6  7  8  9 10  2
     ## [24]  3  4
 
-Now let’s `circular::`-ise and mean the data:
+Now let’s `circular::`-ise and mean the data (I also use the package
+`astroFns` (Harris 2012) to help convert my data into radians, which
+seems to be the simplest way to work with circular data):
 
 ``` r
 library(tidyverse)
@@ -481,7 +485,7 @@ my_circular_mean <- function(x) {
 
 ``` r
 flowering_circular_means <- flowering_summary %>%
-  map(~.x[!is.na(.x)]) %>%  # FIXME/TODO: track down this NA!
+  map(~.x[!is.na(.x)]) %>%  # FIXME/TODO: track down this NA for my MSc...
   map(my_circular_mean)
 flowering_circular_means
 ```
@@ -504,8 +508,6 @@ flowering_circular_means
     ## $T_thermalis_T_bromoides
     ## [1] 3.5
 
-What are the means?
-
 Let’s add these to our plot:
 
 ``` r
@@ -519,6 +521,9 @@ flowering_plot2 +
 ```
 
 ![](2019-03-25-circular-data_files/figure-gfm/plot-circularised-flowering-data-w-means-1.png)<!-- -->
+
+Those means seem to make sense—they are at the intuitive centre of each
+clade’s flowering distribution\! Hooray\!
 
 ## Session info
 
@@ -565,8 +570,6 @@ sessionInfo()
     ## [49] httr_1.4.0       R6_2.4.0         boot_1.3-22      nlme_3.1-137    
     ## [53] compiler_3.5.0
 
-## Further reading
-
 ## References
 
 <div id="refs" class="references">
@@ -582,6 +585,22 @@ Luis Obispo, California, USA.
 
 </div>
 
+<div id="ref-elliott2017">
+
+Elliott, T.L., and A.M. Muasya. 2017. “Taxonomic Realignment in the
+Southern African Tetraria (Cyperaceae, Tribe Schoeneae; Schoenus
+Clade).” *South African Journal of Botany* 112: 354–60.
+<https://doi.org/https://doi.org/10.1016/j.sajb.2017.06.011>.
+
+</div>
+
+<div id="ref-astroFns">
+
+Harris, Andrew. 2012. *AstroFns: Astronomy: Time and Position Functions,
+Misc. Utilities*. <https://CRAN.R-project.org/package=astroFns>.
+
+</div>
+
 <div id="ref-manning2012">
 
 Manning, John, and Peter Goldblatt. 2012. *Plants of the Greater Cape
@@ -594,12 +613,6 @@ Biodiversity Institute.
 
 Wickham, Hadley. 2009. *Ggplot2: Elegant Graphics for Data Analysis*.
 Springer-Verlag New York. <http://ggplot2.org>.
-
-</div>
-
-<div id="ref-elliott2018">
-
-n.d.
 
 </div>
 
