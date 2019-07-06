@@ -255,47 +255,53 @@ flowering_summary <- flowering_times %>%
 flowering_summary
 ```
 
-Now let's `circular::`-ise the data:
+Now let's `circular::`-ise and mean the data:
 
-```{r circularise-flowering-data}
-# FIXME: this seems buggy on the packages' part, so maybe I should just convert to radians, do the mean, then convert back?
-flowering_circular <- flowering_summary %>%
-  map(as.circular,
-    type     = "directions",
-    units    = "hours", 
-    template = "clock24",  # a bit of a hack way to treat month data...
-    rotation = "clock",
-    zero = 1
-  )
-flowering_circular
+```{r helper-functions}
+library(tidyverse)
+library(magrittr)  # ::divide_by()
+library(circular)
+library(astroFns)  # ::hms2rad()
+
+month2rad <- function(month) {
+  stopifnot(month %in% 1:12)
+  hms2rad(2 * month)  # use 24hr time as astroFns:: does
+}
+rad2month <- function(radian) {
+  radian %>%
+    rad2hms() %>%
+    substr(1, 2) %>%  # b/c astroFns:: returns an hms string
+    as.numeric() %>%
+    divide_by(2)
+}
+my_circular_mean <- function(x) {
+  x %>%
+    month2rad() %>%
+    circular(rotation = "clock", template = "geographics") %>%
+    mean() %>%
+    rad2month()
+}
+```
+
+```{r circular-mean-flowering-data}
+flowering_circular_means <- flowering_summary %>%
+  map(~.x[!is.na(.x)]) %>%  # FIXME/TODO: track down this NA!
+  map(my_circular_mean)
+flowering_circular_means
 ```
 
 What are the means?
-
-```{r circular-mean-flowering-data}
-flowering_circular %>%
-  map(mean, na.rm = TRUE) %>%
-  as_vector()  # Less over-whelming printing
-```
 
 Let's add these to our plot:
 
 ```{r plot-circularised-flowering-data-w-means}
 # Put the means in a data.frame so ggplot2 can understand
-mean_flowering_times <- flowering_circular %>%
-  map(mean, na.rm = TRUE) %>%
+mean_flowering_times <- flowering_circular_means %>%
   imap_dfr(~tibble(clade = .y, mean_flowering_time = .x)) %>%
   arrange(clade) %>%
   mutate(clade = unique(sort(flowering_times$clade)))
 flowering_plot2 +
   geom_vline(data = mean_flowering_times, aes(xintercept = mean_flowering_time))
-par(mfrow = c(2, 3))
-flowering_circular %>%
-  iwalk(function(.x, .y) {
-    plot(.x, main = .y)
-    points(mean(.x, na.rm = TRUE), col = "red")
-  })
-par(mfrow = c(1, 1))
 ```
 
 ## Session info

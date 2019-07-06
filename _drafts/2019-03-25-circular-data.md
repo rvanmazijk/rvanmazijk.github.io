@@ -437,108 +437,80 @@ flowering_summary
     ##  [1] 10 11 12  1  2  5  6  7  8  1  2  3  4  2  3  4  5  6  7  8  9 10  2
     ## [24]  3  4
 
-Now let’s `circular::`-ise the
-data:
+Now let’s `circular::`-ise and mean the data:
 
 ``` r
-# FIXME: this seems buggy on the packages' part, so maybe I should just convert to radians, do the mean, then convert back?
-flowering_circular <- flowering_summary %>%
-  map(as.circular,
-    type     = "directions",
-    units    = "hours", 
-    template = "clock24",  # a bit of a hack way to treat month data...
-    rotation = "clock",
-    zero = 1
-  )
-flowering_circular
+library(tidyverse)
+library(magrittr)  # ::divide_by()
+```
+
+    ## 
+    ## Attaching package: 'magrittr'
+
+    ## The following object is masked from 'package:purrr':
+    ## 
+    ##     set_names
+
+    ## The following object is masked from 'package:tidyr':
+    ## 
+    ##     extract
+
+``` r
+library(circular)
+library(astroFns)  # ::hms2rad()
+
+month2rad <- function(month) {
+  stopifnot(month %in% 1:12)
+  hms2rad(2 * month)  # use 24hr time as astroFns:: does
+}
+rad2month <- function(radian) {
+  radian %>%
+    rad2hms() %>%
+    substr(1, 2) %>%  # b/c astroFns:: returns an hms string
+    as.numeric() %>%
+    divide_by(2)
+}
+my_circular_mean <- function(x) {
+  x %>%
+    month2rad() %>%
+    circular(rotation = "clock", template = "geographics") %>%
+    mean() %>%
+    rad2month()
+}
+```
+
+``` r
+flowering_circular_means <- flowering_summary %>%
+  map(~.x[!is.na(.x)]) %>%  # FIXME/TODO: track down this NA!
+  map(my_circular_mean)
+flowering_circular_means
 ```
 
     ## $Epischoenus_spp
-    ## Circular Data: 
-    ## Type = directions 
-    ## Units = hours 
-    ## Template = clock24 
-    ## Modulo = asis 
-    ## Zero = 1.570796 
-    ## Rotation = clock 
-    ##  [1]  2  3  4  5  6  7  8 12  1  2  3 12  1  2  3  4 12  1  2  3 12 11 12
-    ## [24]  1  2  3  4  5  1  2
+    ## [1] 2
     ## 
     ## $S_compar_S_pictus
-    ## Circular Data: 
-    ## Type = directions 
-    ## Units = hours 
-    ## Template = clock24 
-    ## Modulo = asis 
-    ## Zero = 1.570796 
-    ## Rotation = clock 
-    ##  [1]  7  8  9 10 11  4  5  6 12  1  2  3  4  5
+    ## [1] 4.5
     ## 
     ## $S_cuspidatus_et_al
-    ## Circular Data: 
-    ## Type = directions 
-    ## Units = hours 
-    ## Template = clock24 
-    ## Modulo = asis 
-    ## Zero = 1.570796 
-    ## Rotation = clock 
-    ##  [1]  7  8  8  9 10 11  4  5  6  8  9 10 11  4  5  6  7  8  9 10 11  5  6
-    ## [24]  7  8  9 10 11 12 NA
+    ## [1] 8
     ## 
     ## $T_fasciata_T_flexuosa
-    ## Circular Data: 
-    ## Type = directions 
-    ## Units = hours 
-    ## Template = clock24 
-    ## Modulo = asis 
-    ## Zero = 1.570796 
-    ## Rotation = clock 
-    ##  [1] 10 11  8  9 10 11 12  1  2  3  4  5  3  4  5  6  7  1  2  3  4  5  1
-    ## [24]  2  3  4  5 12  1  2  1  2  3  4  5 10 11
+    ## [1] 2
     ## 
     ## $T_microstachys_T_burmannii
-    ## Circular Data: 
-    ## Type = directions 
-    ## Units = hours 
-    ## Template = clock24 
-    ## Modulo = asis 
-    ## Zero = 1.570796 
-    ## Rotation = clock 
-    ##  [1] 11 12  1  2  3  4  1  2  3  4 12  1  2  1  2  3  4  1  2 10 11 12  1
-    ## [24]  2  3  4  2  3  4  9 10 11 12  1  2  3  4
+    ## [1] 1.5
     ## 
     ## $T_thermalis_T_bromoides
-    ## Circular Data: 
-    ## Type = directions 
-    ## Units = hours 
-    ## Template = clock24 
-    ## Modulo = asis 
-    ## Zero = 1.570796 
-    ## Rotation = clock 
-    ##  [1] 10 11 12  1  2  5  6  7  8  1  2  3  4  2  3  4  5  6  7  8  9 10  2
-    ## [24]  3  4
+    ## [1] 3.5
 
 What are the means?
-
-``` r
-flowering_circular %>%
-  map(mean, na.rm = TRUE) %>%
-  as_vector()  # Less over-whelming printing
-```
-
-    ##            Epischoenus_spp          S_compar_S_pictus 
-    ##                   8.024536                  12.195391 
-    ##         S_cuspidatus_et_al      T_fasciata_T_flexuosa 
-    ##                  16.188765                   9.513487 
-    ## T_microstachys_T_burmannii    T_thermalis_T_bromoides 
-    ##                   7.576192                  10.381947
 
 Let’s add these to our plot:
 
 ``` r
 # Put the means in a data.frame so ggplot2 can understand
-mean_flowering_times <- flowering_circular %>%
-  map(mean, na.rm = TRUE) %>%
+mean_flowering_times <- flowering_circular_means %>%
   imap_dfr(~tibble(clade = .y, mean_flowering_time = .x)) %>%
   arrange(clade) %>%
   mutate(clade = unique(sort(flowering_times$clade)))
@@ -547,21 +519,6 @@ flowering_plot2 +
 ```
 
 ![](2019-03-25-circular-data_files/figure-gfm/plot-circularised-flowering-data-w-means-1.png)<!-- -->
-
-``` r
-par(mfrow = c(2, 3))
-flowering_circular %>%
-  iwalk(function(.x, .y) {
-    plot(.x, main = .y)
-    points(mean(.x, na.rm = TRUE), col = "red")
-  })
-```
-
-![](2019-03-25-circular-data_files/figure-gfm/plot-circularised-flowering-data-w-means-2.png)<!-- -->
-
-``` r
-par(mfrow = c(1, 1))
-```
 
 ## Session info
 
@@ -587,9 +544,10 @@ sessionInfo()
     ## [1] stats     graphics  grDevices utils     datasets  methods   base     
     ## 
     ## other attached packages:
-    ##  [1] forcats_0.4.0   stringr_1.4.0   dplyr_0.8.0.1   purrr_0.3.2    
-    ##  [5] readr_1.3.1     tidyr_0.8.3     tibble_2.1.1    tidyverse_1.2.1
-    ##  [9] here_0.1        circular_0.4-93 ggplot2_3.1.1  
+    ##  [1] astroFns_4.1-0  magrittr_1.5    forcats_0.4.0   stringr_1.4.0  
+    ##  [5] dplyr_0.8.0.1   purrr_0.3.2     readr_1.3.1     tidyr_0.8.3    
+    ##  [9] tibble_2.1.1    tidyverse_1.2.1 here_0.1        circular_0.4-93
+    ## [13] ggplot2_3.1.1  
     ## 
     ## loaded via a namespace (and not attached):
     ##  [1] tidyselect_0.2.5 xfun_0.6         haven_2.1.0      lattice_0.20-38 
@@ -601,11 +559,11 @@ sessionInfo()
     ## [25] knitr_1.22       fansi_0.4.0      highr_0.8        broom_0.5.2     
     ## [29] Rcpp_1.0.1       scales_1.0.0     backports_1.1.4  jsonlite_1.6    
     ## [33] hms_0.4.2        digest_0.6.19    stringi_1.4.3    grid_3.5.0      
-    ## [37] rprojroot_1.3-2  cli_1.1.0        tools_3.5.0      magrittr_1.5    
-    ## [41] lazyeval_0.2.2   zeallot_0.1.0    crayon_1.3.4     pkgconfig_2.0.2 
-    ## [45] xml2_1.2.0       lubridate_1.7.4  rstudioapi_0.10  assertthat_0.2.1
-    ## [49] rmarkdown_1.12   httr_1.4.0       R6_2.4.0         boot_1.3-22     
-    ## [53] nlme_3.1-137     compiler_3.5.0
+    ## [37] rprojroot_1.3-2  cli_1.1.0        tools_3.5.0      lazyeval_0.2.2  
+    ## [41] zeallot_0.1.0    crayon_1.3.4     pkgconfig_2.0.2  xml2_1.2.0      
+    ## [45] lubridate_1.7.4  rstudioapi_0.10  assertthat_0.2.1 rmarkdown_1.12  
+    ## [49] httr_1.4.0       R6_2.4.0         boot_1.3-22      nlme_3.1-137    
+    ## [53] compiler_3.5.0
 
 ## Further reading
 
