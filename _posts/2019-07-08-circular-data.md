@@ -4,7 +4,7 @@ author: "Ruan van Mazijk"
 layout: single
 ---
 
-For the first proper blog-post on this blog, I thought I’d share a
+For my first long-form blogpost, I thought I’d share a
 recent statistical problem I’ve had as part of my Masters work.
 
 One of my chapters is about comparing patterns of growth and flowering
