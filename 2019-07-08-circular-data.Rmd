@@ -3,11 +3,16 @@ title: "Wrapping my head around circular means"
 author: "Ruan van Mazijk"
 output: github_document
 fig_caption: true
-bibliography: "../assets/2019-07-06-circular-data.bib"
+bibliography: "assets/2019-07-08-circular-data.bib"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, results = "hold")
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  results = "hold",
+  fig.path = "assets/images/2019-07-08-circular-data_files/"
+)
 ```
 
 For the first proper blog-post on this blog, I thought I'd share a recent statistical problem I've had as part of my Masters work.
