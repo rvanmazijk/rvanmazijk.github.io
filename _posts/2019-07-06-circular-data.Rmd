@@ -3,7 +3,7 @@ title: "Wrapping my head around circular means"
 author: "Ruan van Mazijk"
 output: github_document
 fig_caption: true
-bibliography: "2019-07-06-circular-data.bib"
+bibliography: "../assets/2019-07-06-circular-data.bib"
 ---
 
 ```{r setup, include=FALSE}
@@ -97,7 +97,7 @@ I began this post by saying that I wanted to share the application of circular s
 
 As above, I am comparing flowering data between six clades of gramminoid fynbos plants (Cyperaceae, Tribe Schoeneae), namely the genera _Schoenus_ L. and _Tetraria_ Beauv. _Tetraria_ is known to be polyphyletic, and until recently the only _Schoenus_ species in southern Africa was the cosmopolitain _S. nigricans_ L. The rest, used below, have been transferred from _Tetraria_ Beauv. to _Schoenus_ L. by @elliott2017.
 
-The last large-scale conspectus of the Cape flora was by @manning2012. The flowering data I use here are from that flora, with species names ammended to match then current taxonomy [as in @elliott2018]. Each species has flowering times as follows:
+The last large-scale conspectus of the Cape flora was by @manning2012. The flowering data I use here are from that flora, with species names ammended to match then current taxonomy [as in @elliott2017]. Each species has flowering times as follows:
 
 ```{r setup-flowering-data, include=FALSE}
 library(here)

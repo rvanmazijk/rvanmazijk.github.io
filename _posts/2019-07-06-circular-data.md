@@ -167,8 +167,7 @@ and Muasya (2017).
 The last large-scale conspectus of the Cape flora was by Manning and
 Goldblatt (2012). The flowering data I use here are from that flora,
 with species names ammended to match then current taxonomy (as in
-<span class="citeproc-not-found" data-reference-id="elliott2018">**???**</span>).
-Each species has flowering times as follows:
+Elliott and Muasya 2017). Each species has flowering times as follows:
 
 | Species                 | Start | End  |
 | :---------------------- | :---- | :--- |
