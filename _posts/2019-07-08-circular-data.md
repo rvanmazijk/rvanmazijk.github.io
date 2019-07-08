@@ -1,5 +1,5 @@
 ---
-title: "Running a workshop on data wrangling in R with the `tidyverse`"
+title: "_Wrapping_ my head around circular means"
 author: "Ruan van Mazijk"
 layout: single
 ---
@@ -573,10 +573,6 @@ sessionInfo()
 
 ## References
 
-<div id="refs" class="references">
-
-<div id="ref-circular">
-
 Agostinelli, C., and U. Lund. 2017. *R Package `circular`: Circular
 Statistics (Version 0.4-93)*. CA: Department of Environmental Sciences,
 Informatics; Statistics, Ca’ Foscari University, Venice, Italy. UL:
@@ -584,37 +580,17 @@ Department of Statistics, California Polytechnic State University, San
 Luis Obispo, California, USA.
 <https://r-forge.r-project.org/projects/circular/>.
 
-</div>
-
-<div id="ref-elliott2017">
-
 Elliott, T.L., and A.M. Muasya. 2017. “Taxonomic Realignment in the
 Southern African Tetraria (Cyperaceae, Tribe Schoeneae; Schoenus
 Clade).” *South African Journal of Botany* 112: 354–60.
 <https://doi.org/https://doi.org/10.1016/j.sajb.2017.06.011>.
 
-</div>
-
-<div id="ref-astroFns">
-
 Harris, Andrew. 2012. *AstroFns: Astronomy: Time and Position Functions,
 Misc. Utilities*. <https://CRAN.R-project.org/package=astroFns>.
-
-</div>
-
-<div id="ref-manning2012">
 
 Manning, John, and Peter Goldblatt. 2012. *Plants of the Greater Cape
 Floristic Region. 1: The Core Cape Flora.* South African National
 Biodiversity Institute.
 
-</div>
-
-<div id="ref-ggplot2">
-
 Wickham, Hadley. 2009. *Ggplot2: Elegant Graphics for Data Analysis*.
 Springer-Verlag New York. <http://ggplot2.org>.
-
-</div>
-
-</div>
