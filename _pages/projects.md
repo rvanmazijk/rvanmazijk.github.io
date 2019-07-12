@@ -7,7 +7,7 @@ permalink: /projects/
 
 ## Journal articles
 
-**Van Mazijk, R.**, Cramer, M.D. \& Verboom, G.A. (In prep.). The role of environmental heterogeneity in determining plant species richness in the GCFR & SWAFR. _Journal of Biogeography_
+**Van Mazijk, R.**, Cramer, M.D. & Verboom, G.A. (In prep.). The role of environmental heterogeneity in determining plant species richness in the GCFR & SWAFR. _Journal of Biogeography_
 
 Cramer, M.D., Wootton, L.M., **van Mazijk, R.** & Verboom, G.A. (In press). New regionally-modelled soil layers improve prediction of vegetation type relative to that based on global soil models. _Diversity & Distributions_
 
@@ -15,9 +15,7 @@ Cramer, M.D., Wootton, L.M., **van Mazijk, R.** & Verboom, G.A. (In press). New 
 
 ## Popular articles
 
-Elliott, T.L., Laidler, G., Muasya, A.M., Muthaphuli, N. & **van Mazijk, 
-R.** (In press). Foregrounding sedges: bringing the neglected Cape Schoenoid 
-sedges to the forefront of genomic research. _Veld & Flora_.
+Elliott, T.L., Laidler, G., Muasya, A.M., Muthaphuli, N. & **van Mazijk, R.** (In press). Foregrounding sedges: bringing the neglected Cape Schoenoid sedges to the forefront of genomic research. _Veld & Flora_.
 
 ## Projects
 
